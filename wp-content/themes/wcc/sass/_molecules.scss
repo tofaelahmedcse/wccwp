@@ -1,0 +1,165 @@
+/*
+Molecules
+====================================================*/
+//Blog Card
+.card-columns{
+  column-count: 1;
+  padding: 0 15px;
+  @include media('>=sm'){
+    column-count: 2;
+    column-gap: $gutter-2;
+  }
+  @include media('>=lg'){
+    column-count: 3;
+    column-gap: $gutter-2;
+  }
+  .card {
+    margin-bottom: $gutter-2;
+  }
+}
+.post-card{
+  margin-bottom: $unit4;
+  border: solid 1px $color-accent-3;
+  border-radius: 0;
+  .thumbnail{
+    img{
+      border-radius: 0;
+    }
+  }
+  .card-body{
+    padding: $unit2;
+    .user {
+      a {
+        i {
+          margin-top: $halfunit;
+        }
+      }
+    }
+  }
+}
+
+.pagination{
+  span{
+    padding: $unit2;
+    background-color: transparent;
+    color: $color-secondary;
+    border: 0;
+    font-size: 1.2rem;
+  }
+  a{
+    padding: $unit2;
+    margin-left: 0 !important;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border:solid 1px grey;
+    color: $color-secondary;
+  }
+  .prev{
+    border-right: 0;
+  }
+  .next{
+    border-left: 0;
+  }
+}
+
+.team-card-wrapper{
+  border: solid 1px $color-accent-4;
+  padding: 0;
+  margin: 0;
+  button {
+    display: block;
+    background: none;
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+  img{
+    border-radius: 0;
+  }
+}
+
+
+.team-modal{
+  .modal-dialog {
+    max-width: 1000px;
+    .modal-content{
+      .modal-img {
+        max-width: 60%;
+        @include media(">=sm") {
+          max-width: 50%;
+        }
+        @include media(">=md") {
+          max-width: 100%;
+        }
+      }
+      .modal-text {
+        padding: $unit4;
+      }
+    }
+  }
+}
+
+
+.career-intro-text{
+  ul{
+    column-count: 2;
+  }
+}
+
+.event-card-wrapper{
+  border:solid 1px $color-accent-3;
+  img{
+    border-radius: 0;
+  }
+}
+
+.split-cta{
+  .b-block{
+    position: relative;
+    .bg{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      .bg-row{
+        height: 100%;
+      }
+    }
+  }
+}
+
+.border-text{
+  padding-left: 0;
+  @include media('>=md'){
+    margin-left: $unit2;
+    .text{
+      padding-left: $unit1;
+      border-left: solid 4px $color-primary;
+    }
+  }
+}
+
+#careers-accordion{
+  .card{
+    background-color: transparent;
+    border:none !important;
+    border-radius: 0 !important;
+    .card-header{
+      background-color: transparent;
+      padding: 0 !important;
+      border:none !important;
+      button{
+        border:none !important;
+        border-radius: 0 !important;
+        background-color: transparent;
+        color: $color-primary;
+        &:hover{
+          color: $grey;
+        }
+      }
+    }
+    .card-body{
+      background-color: transparent;
+    }
+  }
+}

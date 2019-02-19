@@ -1,0 +1,678 @@
+/*
+Typography and Icons
+================================================================*/
+
+// Font face generator mixin
+// Font Face
+// =============================================================================
+
+// Krub font face 
+//@include font-face("Krub", "fonts/krub/krub-regular-webfont");
+@include font-face("Krub", "fonts/krub/Krub-Regular");
+
+
+// Any additional heading styles above & beyond what's in variables
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-family: $fourth-font-family;
+        font-weight: $regular-font;
+    }
+}
+
+
+h1 {
+    text-transform: capitalize;
+
+    @include media(">=xl") {
+        font-weight: 500;
+    }
+
+    font-size: $font-size * 3.5;
+}
+
+h2 {
+    @include media(">=xl") {
+        font-weight: 700;
+        font-size: $font-size * 2.625;
+    }
+}
+
+h3 {
+    @include media(">=xl") {
+        font-weight: 700;
+        font-size: $font-size * 2.25;
+    }
+}
+
+h4 {
+    @include media(">=xl") {
+        font-weight: 700;
+        font-size: $font-size * 1.875;
+    }
+}
+
+h5 {
+    @include media(">=xl") {
+        font-weight: 700;
+        font-size: $font-size * 1.75;
+    }
+}
+
+h6 {
+    @include media(">=xl") {
+        font-weight: 400;
+        font-size: $font-size * 1.5;
+    }
+}
+
+p,
+ul,
+li {
+    font-size: $font-size;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.lead,
+.lead p {
+    font-size: 1.125rem;
+    font-weight: 400;
+
+    @include media(">=md") {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
+
+.small,
+.small p {
+    font-size: .9rem;
+    color: $color-basefont-2;
+}
+
+.legal {
+    font-size: .8rem;
+
+    @include media(">=xl") {
+        font-size: .875rem;
+    }
+}
+
+blockquote {
+    font-size: 1.125rem;
+}
+
+cite {
+    font-style: italic;
+}
+
+// a:link {
+//   font-style: italic;
+//   font-weight: 700;
+//   color: $color-accent-1;
+// }
+//
+// a:hover {
+//   font-weight: 400;
+//   color: $color-primary;
+//   font-style: normal;
+// }
+//
+// a:active {
+//   font-weight: 700;
+//   color: $color-primary;
+//   font-style: normal;
+// }
+//
+// a:visited {
+//   font-weight: 400;
+//   color: $color-accent-2;
+//   font-style: normal;
+//   text-decoration: underline;
+// }
+
+
+// Bullet styles
+ul {
+    list-style: none;
+    padding-left: $unit1;
+
+    li {
+        position: relative;
+        display: block;
+        padding-left: $unit;
+
+        &:before {
+            display: block;
+            content: "\f0c8";
+            position: absolute;
+            font-family: "Font Awesome 5 Free";
+            top: 8px;
+            left: -10px;
+            font-size: .55rem;
+            color: $color-primary;
+        }
+    }
+
+    &.nav,
+    &.navbar-nav {
+        padding-left: 0;
+
+        li {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.double {
+    ul {
+        li {
+            margin-bottom: $unit3;
+        }
+    }
+}
+
+.card-label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: $color-accent-2;
+    font-weight: 700;
+}
+
+.category-label {
+    font-size: 1.125;
+    text-transform: uppercase;
+    color: $font-light;
+    margin-bottom: 0;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.excerpt {
+    p {
+        font-size: .9rem;
+        color: $color-basefont-2;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Baner style 
+#primary {
+    .bg-dark {
+        p {
+            @include font($fontFamily: $fifth-font-family);
+            font-size: $font-size * 1.75;
+        }
+
+        a.btn {
+            font-size: $font-size +2;
+        }
+    }
+}
+
+.masonary h3 {
+    font-size: $font-size * 2;
+    font-weight: 400;
+}
+
+// World class contracting section style 
+.world-class-contracting-section {
+    .lead {
+        font-size: $font-size * 2.25;
+    }
+
+    p {
+        font-size: $font-size * 1.3125;
+        font-family: $fifth-font-family;
+    }
+}
+
+
+/* our valuse */
+.our-valuse-info {
+    .text-center {
+        h3 {
+            @include font($fourth-font-family, normal, 700);
+            font-size: $font-size+4;
+            line-height: 27px;
+
+        }
+
+        p {
+            @include font($fifth-font-family, normal, 400);
+            font-size: $font-size - 2;
+            line-height: 20px;
+            color: $comet;
+        }
+    }
+}
+
+.our-values-health-safety {
+    h3 {
+        @include font($fourth-font-family, normal, 700);
+        line-height: 44px;
+        color: $endeavour2;
+        margin-top: 58px;
+    }
+
+    p {
+        @include font($fifth-font-family, normal, 400);
+        color: $comet;
+        margin-top: 20px;
+    }
+}
+
+/* our valuse */
+
+// Splite Cta section
+.split-cta {
+    .b-block {
+        color: $white;
+
+        p {
+            @include font($fifth-font-family, normal, 400);
+            a {
+                font-size: $font-size + 2;
+                color: $white;
+            }
+        }
+    }
+}
+
+/* Beginning Our experienc */
+
+.bg-light{
+    h2{
+        color:$regal-blue;
+        line-height: 1.34;
+        
+        
+    }
+    .industry-info{
+        h4{
+            font-size:$font-size + 4;
+            color:$endeavour2;
+        
+        } 
+    }
+    
+}
+.carousel-block-1{
+    .container{
+        h3{
+            color:$regal-blue;
+            margin-bottom:0 ;
+
+        }
+        ul{
+            li{
+                font-family: $fourth-font-family;
+                line-height: 1.5;
+                color:$comet;
+            }
+        }
+    }
+    .owl-carousel{
+        .owl-nav{
+            .owl-prev,.owl-next{
+                i.fas{
+                    color: rgba(255, 255, 255, .5)!important;
+                    font-size: 25px;
+
+                }
+            }
+        }
+    }
+}
+
+/* Beginning Our experienc */
+
+/* Contact Page */
+.contact-content {
+    h3 {
+        font-family: $fourth-font-family;
+    }
+
+    .col-md-5 {
+        .row {
+            &:nth-child(3) {
+                h3 {
+                    font-size: $font-size + 8;
+                }
+            }
+
+            &:nth-child(5) {
+                h3 {
+                    font-size: $font-size + 8;
+                }
+            }
+        }
+
+        .mb-5 {
+            .col-12 {
+                .row {
+
+                    .contact-details {
+                        font-family: $fifth-font-family;
+                        font-weight: 400;
+                    }
+
+                    .contact-details.d-inline-block {
+                        font-weight: 700 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .col-md-7 {
+        .nf-field-container .field-wrap .nf-field-label label {
+            font-family: $fourth-font-family;
+            font-size: $font-size;
+            font-weight: 700 !important;
+        }
+
+        #nf-field-4 {
+            line-height: 19px;
+            font-size: $font-size - 2;
+            font-family: $fourth-font-family;
+        }
+    }
+}
+
+.team-section {
+    h4 {
+        font-family: $fourth-font-family;
+        font-size: $font-size + 4;
+    }
+
+    p {
+        font-family: $fifth-font-family;
+    }
+
+    .wrap-link {
+        font-family: $fourth-font-family;
+        font-size: $font-size - 2;
+    }
+}
+
+.project-section {
+    h3 {
+        font-size: $font-size * 3;
+        font-family: $fourth-font-family;
+    }
+
+    .project-content {
+        p {
+            color: $white;
+            font-family: $fifth-font-family;
+        }
+
+        .col-lg-6 {
+            a.contact-details {
+                font-size: $font-size + 2;
+                font-family: $fourth-font-family;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+/* End contact Page */
+
+/* Our carrer Page */
+.benefit-section {
+    .text-center {
+        p {
+            font-family: $fifth-font-family;
+            font-size: $font-size + 5;
+        }
+    }
+
+    .col-md-3 {
+        h4{
+            font-family: $fourth-font-family;
+            font-size: $font-size + 4;
+        }
+
+        p {
+            font-family: $fifth-font-family;
+            font-size: $font-size - 2;
+        }
+    }
+}
+.our-carrer-form{
+    p{
+        font-family: $fifth-font-family;
+    }
+}
+
+/* End Our carrer Page */
+/* Why Wcc Page */
+.page-template-page-why-wcc-php {
+    p {
+        font-family: $fifth-font-family;
+    }
+}
+
+.contracting-info {
+    h2 {
+        font-size: $font-size * 3;
+        font-family: $fourth-font-family;
+    }
+
+    p {
+        font-size: $font-size + 5;
+    }
+}
+
+.organized-info {
+    h2 {
+        font-size: $font-size * 2 + 4;
+        font-family: $fourth-font-family;
+    }
+}
+
+.commitment-info {
+    h2 {
+        font-size: $font-size * 2 + 4;
+        font-family: $fourth-font-family;
+    }
+}
+
+.history-info {
+    h2 {
+        font-size: $font-size * 2 + 10;
+        font-family: $fourth-font-family;
+    }
+}
+
+.support-section {
+    .text-center {
+        h2 {
+            font-size: $font-size * 2 + 10;
+            font-family: $fourth-font-family;
+        }
+    }
+}
+
+.world-skill {
+    h2 {
+        font-size: $font-size * 2 + 4;
+        font-family: $fourth-font-family;
+    }
+}
+
+/* End Why Wcc Page */
+
+
+
+// Footer style 
+.navbar-nav-footer {
+    .nav-link {
+        font-size: $font-size - 2;
+    }
+
+}
+
+.how-we-work-btn {
+    font-size: $font-size + 2;
+    line-height: 54px;
+}
+
+.support-section {
+    h6 {
+        font-family: $fifth-font-family;
+    }
+}
+
+#menu-footer-social {
+    a {
+        i {
+            font-size: $font-size - 2;
+            font-weight: 400;
+        }
+    }
+}
+
+
+
+
+// Responsize style 
+@include breakpointed(mobile) {
+    h1 {
+        font-size: $font-size * 2;
+    }
+
+    h2 {
+        font-size: $font-size * 1.375;
+    }
+
+    // Baner style 
+    #primary {
+        .bg-dark {
+            p {
+                font-size: $font-size + 2;
+            }
+        }
+    }
+
+    // World class contracting section style 
+    .world-class-contracting-section {
+        text-align: center;
+
+        p {
+            font-size: $font-size - 2;
+        }
+
+        .lead {
+            font-size: $font-size + 4;
+            line-height: 27px;
+        }
+
+        .pl-4 {
+            line-height: 24px;
+
+        }
+    }
+
+    .how-we-work-section {
+        h2 {
+            font-size: $font-size + 16px !important;
+            line-height: 56px;
+        }
+    }
+
+    .support-section {
+        h2 {
+            font-size: $font-size + 16 !important;
+            line-height: 42px;
+        }
+
+        h6 {
+            font-size: $font-size + 4 !important;
+            line-height: 27px;
+
+        }
+
+        .align-items-center {
+            .col-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 50px;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .contracting-info {
+        h2 {
+            font-size: $font-size *2;
+        }
+    }
+
+    .organized-info {
+        h2 {
+            font-size: $font-size + 8;
+        }
+    }
+
+    .project-section {
+        h3 {
+            font-size: $font-size * 2 - 2;
+        }
+    }
+
+    .split-cta {
+        text-align: center;
+
+        .b-block {
+            h3 {
+                font-size: $font-size + 12;
+                line-height: 40px;
+            }
+
+        }
+    }
+    .carousel-block-1 {
+        .container {
+            h3{
+                font-size: $font-size + 10;
+            } 
+        }
+    } 
+
+}
+
+@include breakpointed(tablet) {
+    .commitment-info {
+        h2 {
+            font-size: $font-size * 2;
+        }
+
+        .zed1 {
+            p strong {
+                font-size: $font-size - 2 !important;
+            }
+        }
+    }
+}

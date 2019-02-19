@@ -1,0 +1,4 @@
+wp-admin info
+=============
+user: wccltd
+pass: wccltd1254$$##

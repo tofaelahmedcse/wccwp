@@ -1,0 +1,59 @@
+/*
+Sructure
+================================================================*/
+body {
+  font-family: $base-font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  @include font-smoothing(on);
+  text-rendering: optimizelegibility;
+  color: $font-color;
+}
+
+.main-wrapper {
+  //padding-top: 40px;
+  @include media(">=lg") {
+    //padding-top: 0px;
+    overflow-x: hidden;
+  }
+  &.fixed {
+    @include media(">=lg") {
+      padding-top: 0;
+    }
+  }
+}
+
+
+//responsive stuff for content block 26 and 27
+.img-holder {
+  margin-top: $unit3;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  @include media(">=md") {
+    display: none;
+  }
+}
+div.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .bk-img-block {
+    display: none;
+    @include media(">=md") {
+      display: block;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 50%;
+    }
+
+  }
+}
+.zed1{
+  z-index:1;
+}

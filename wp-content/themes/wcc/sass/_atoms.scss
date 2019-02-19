@@ -1,0 +1,442 @@
+/*
+Atoms
+===========================================*/
+
+//////////////////////
+//  Backgrounds
+////////////////////
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.bg-secondary {
+  background-color: $color-secondary !important;
+}
+
+.bg-tertiary {
+  background-color: $color-tertiary;
+}
+
+.bg-1 {
+  background-color: $color-accent-1;
+}
+
+.bg-2 {
+  background-color: $color-accent-2;
+}
+
+.bg-3 {
+  background-color: $color-accent-3;
+}
+
+.bg-4 {
+  background-color: $color-accent-4;
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+//////////////////////
+//  Buttons
+////////////////////
+
+.btn, a.btn {
+  padding: $btn-padding;
+  background-color: $color-primary;
+  color: $font-light;
+  display: inline-block;
+  @include box-sizing(border-box);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid 2px $color-primary;
+  @include border-radius($btn-border-radius);
+  font-style: normal;
+  font-weight: 400;
+  + a {
+    margin-left: $unit2;
+  }
+  &:hover, &:focus {
+    background-color: darken($color-primary, 7%);
+    border-color: darken($color-primary, 7%);
+    color: $font-light;
+  }
+  &.disabled {
+    background-color: $grey;
+    color: $color-basefont-2;
+    border-color: $grey;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.btn-primary, a.btn-primary {
+  @extend .btn;
+}
+
+    .btn-primary--lg, a.btn-primary--lg {
+      @extend .btn;
+      padding: $btn-padding-lg;
+    }
+
+    .btn-primary--sm, a.btn-primary--sm {
+      @extend .btn;
+      padding: $btn-padding-sm;
+    }
+
+.btn-primary--secondary, a.btn-primary--secondary {
+  @extend .btn;
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+  &:hover, &:focus {
+    background-color: darken($color-secondary, 7%);
+    border-color: darken($color-secondary, 7%);
+  }
+}
+
+        .btn-primary--secondary--lg, a.btn-primary--secondary--lg {
+          @extend .btn-primary--secondary;
+          padding: $btn-padding-lg;
+        }
+
+        .btn-primary--secondary--sm, a.btn-primary--secondary--sm {
+          @extend .btn-primary--secondary;
+          padding: $btn-padding-sm;
+        }
+
+.btn-primary--tertiary, a.btn-primary--tertiary {
+  @extend .btn;
+  background-color: $color-tertiary;
+  &:hover, &:focus {
+    background-color: darken($color-tertiary, 7%);
+    border-color: darken($color-tertiary, 7%);
+  }
+}
+
+        .btn-primary--tertiary--lg, a.btn-primary--tertiary--lg {
+          @extend .btn-primary--tertiary;
+          padding: $btn-padding-lg;
+        }
+
+        .btn-primary--tertiary--sm, a.btn-primary--tertiary--sm {
+          @extend .btn-primary--tertiary;
+          padding: $btn-padding-sm;
+        }
+
+.btn-primary--inverted, a.btn-primary--inverted {
+  @extend .btn;
+  background-color: $color-accent-4;
+  &:hover, &:focus {
+    background-color: $white;
+    border-color: $white;
+  }
+}
+
+        .btn-primary--inverted--lg, a.btn-primary--inverted--lg {
+          @extend .btn-primary--inverted;
+          padding: $btn-padding-lg;
+        }
+
+        .btn-primary--inverted--sm, a.btn-primary--inverted--sm {
+          @extend .btn-primary--inverted;
+          padding: $btn-padding-sm;
+        }
+
+.btn-secondary, a.btn-secondary {
+  @extend .btn;
+  background-color: transparent;
+  color: $color-basefont-2;
+  border-color: $color-basefont-2;
+  &:hover, &:focus {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+      .btn-secondary--sm, a.btn-secondary--sm {
+        @extend .btn-secondary;
+        padding: $btn-padding-sm;
+      }
+
+      .btn-secondary--lg, a.btn-secondary--lg {
+        @extend .btn-secondary;
+        padding: $btn-padding-lg;
+      }
+
+.btn-tertiary, a.btn-tertiary {
+  font-size: .9rem;
+  font-weight: 400;
+  &:link {
+    font-style: italic;
+    font-weight: 700;
+    color: $color-accent-1;
+  }
+  &:hover {
+    font-weight: 400;
+    color: $color-primary;
+    font-style: normal;
+  }
+  &:active {
+    font-weight: 700;
+    color: $color-primary;
+    font-style: normal;
+  }
+  &:visited {
+    font-weight: 400;
+    color: $color-accent-2;
+    font-style: normal;
+    text-decoration: underline;
+  }
+}
+
+
+//////////////////////////////////
+//  Banners
+/////////////////////////////////
+
+//why work with us banner
+.banner-wrapper {
+  background-image: url("http://via.placeholder.com/1080x150");
+}
+
+.banner {
+  min-height: 380px;
+}
+
+//////////////////////////////////
+//  Colours
+/////////////////////////////////
+
+.color-primary {
+  color: $color-primary;
+}
+
+.color-black {
+  color: $font-color;
+}
+
+.color-base-2 {
+  color: $color-basefont-2;
+}
+
+.color-light {
+  color: $font-light;
+}
+
+////////////////////////////////////
+//  Font weights
+///////////////////////////////////
+
+.light {
+  font-weight: 300;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+////////////////////////////////////
+//  Forms
+///////////////////////////////////
+
+label {
+  font-size: .7rem;
+  color: $font-color;
+  text-transform: none;
+  font-weight: 300!important;
+  font-family: $base-font-family;
+}
+
+input, textarea {
+  border: 1px solid $form-grey;
+  padding: $unit1 $u-15;
+  color: $color-basefont-1;
+  &:hover {
+    border-color: $color-accent-1;
+    ::-webkit-input-placeholder {
+       color: $color-accent-1;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: $color-accent-1;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: $color-accent-1;
+    }
+
+    :-ms-input-placeholder {
+       color: $color-accent-1;
+    }
+  }
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+::-webkit-input-placeholder {
+   color: $color-basefont-2;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $color-basefont-2;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $color-basefont-2;
+}
+
+:-ms-input-placeholder {
+   color: $color-basefont-2;
+}
+
+
+input[type="button"] {
+  @extend .btn;
+}
+
+.nf-pass {
+  input {
+    border-color: $success;
+    background:transparent;
+  }
+}
+
+.nf-fail {
+  input {
+    border-color: $danger;
+    background:transparent;
+  }
+}
+
+
+////////////////////////////////////
+//  Images
+///////////////////////////////////
+
+img.bg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-img {
+  height: 175px;
+}
+
+////////////////////////////////////
+//  Maps
+///////////////////////////////////
+
+.acf-map {
+  width: 100%;
+  height: 400px;
+  border: #ccc solid 1px;
+  margin: 20px 0;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+  max-width: inherit !important;
+}
+
+////////////////////////////////////
+//  Misc
+///////////////////////////////////
+
+.missing {
+  display: block;
+  color: #ff69b4;
+}
+
+.avatar {
+  margin-bottom: $unit1;
+  img{
+    border-radius: 50%;
+  }
+}
+
+
+.rounded-img{
+  display: flex;
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  img{
+    border-radius: 50%;
+  }
+}
+
+
+#btn-see-more {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    display: block;
+    content: url('images/app.arrow.down.png');
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 0.3s;
+    background-color: #e5e5e5;
+    text-align: center;
+    margin-top: $unit3;
+  }
+  &:after {
+    display: block;
+    content: 'SEE MORE';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 0.3s;
+    background-color: #e5e5e5;
+    text-align: center;
+    font-size: 1.44rem;
+    margin-top: 25px;
+    font-family: $second-font-family;
+    @include media(">=md") {
+      font-size: 1.777rem;
+    }
+  }
+  &:hover {
+    top: 100%;
+    cursor: pointer;
+    &:before {
+      top: 0;
+      transition: top 0.3s;
+    }
+    &:after {
+      top: 100%;;
+      transition: top 0.3s;
+    }
+  }
+}
+
+
+.wrap-link{
+  word-break: break-all;
+}
+
+.placeholder-text{
+  color: red !important;
+}
+
+

@@ -1,0 +1,208 @@
+// This file contains variables that override bootstrap or other css package variables.
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700');
+
+$base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$second-font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$third-font-family: 'Fira Sans Condensed', Helvetica, Arial, sans-serif;
+$fourth-font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+$fifth-font-family: 'Krub', Helvetica, Arial, sans-serif;
+$regular-font: 400;
+
+$font-family-sans-serif: $base-font-family;
+
+$fa-font-path:        "./fonts/fontawesome/webfonts";
+
+// Colors
+$color-primary: #9f9f9f; //primary   Old Base ORange: #F28A2B   #9f9f9f
+$color-secondary: #606060; // old base secondary color: #39699C  #606060
+$color-tertiary: #c6c6c6;
+
+$color-basefont-1: #323232;
+$color-basefont-2: #737373;
+
+$color-accent-1: #455a64;
+$color-accent-2: #607d8b;
+$color-accent-3: #cfd8dc;
+$color-accent-4: #f5f8f9;
+
+$success: #00C6A6;
+$warning: #FFC700;
+$danger: #FF004C;
+
+$white: #FFFFFF;
+$black: #000000;
+$grey:#ececec;
+$depp-gray:#f4f5f9;
+$form-grey: #afafaf;
+$regal-blue: #033975;
+$endeavour: #0062ad;
+$endeavour2: #0061AC;
+$deep-blue:#0361a9;
+$comet: #5b5b69;
+$athens-gray: #F4F5F8;
+$denim: #0061ac;
+$midnight-express:#0C0C38;
+$cornflower-blue:#275289;
+
+
+$link-color:$color-primary;
+$font-color: $color-basefont-1;
+$font-light: $white;
+
+// Font Sizes.
+$font-size: 16px;
+$line-height: 1.5em;
+
+$paragraph-margin-top: 20px;
+
+// 'include-media' plugging into Bootstrap 4's Grid Breakpoints map
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920
+);
+$breakpoints: $grid-breakpoints;
+
+$spacer: 8px;
+$spacers: (
+  0: 0,
+  1: ($spacer * 1),
+  2: ($spacer * 2),
+  3: ($spacer * 3),
+  4: ($spacer * 4),
+  5: ($spacer * 5),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  8: ($spacer * 8),
+  9: ($spacer * 9),
+  10: ($spacer * 10),
+  11: ($spacer * 11),
+  12: ($spacer * 12),
+  15: ($spacer * 15),
+  20: ($spacer * 20),
+  25: ($spacer * 25),
+);
+
+
+//units - add custom as needed
+$unit: 8px;
+
+$halfunit: $unit/2;
+$unit1: $unit*1;
+$u-15: $unit1 + $halfunit;
+$unit2: $unit*2;
+$u-25: $unit2 + $halfunit;
+$unit3: $unit*3;
+$unit4: $unit*4;
+$unit5: $unit*5;
+$unit6: $unit*6;
+$unit7: $unit*7;
+$unit8: $unit*8;
+$unit9: $unit*9;
+$unit10: $unit*10;
+$unit11: $unit*11;
+$unit12: $unit*12;
+$unit13: $unit*13;
+$unit14: $unit*14;
+$unit15: $unit*15;
+$unit20: $unit*20;
+$unit25: $unit*25;
+
+// Header margin
+$heading-margin: 0.7em;
+
+// Block
+$block-padding: 100px;
+$block-mobile-padding: 50px;
+
+//padding for bottom block
+$gutter: 15px;
+$gutter-2: $gutter*2;
+
+// Buttons
+$btn-padding: $unit2 $unit6;
+$btn-padding-lg: $u-25 $unit8;
+$btn-padding-sm: $unit1 $unit3;
+
+$btn-border-radius: 2px;
+
+$btn-bg-color: $color-primary;
+$btn-text-color: #FFF;
+$btn-hover-text-color: #FFF;
+$btn-hover-bg-color: darken($btn-bg-color, 10%);
+
+$btn-white-bg-color: $white;
+$btn-white-text-color: $black;
+$btn-white-hover-text-color: $btn-white-text-color;
+$btn-white-hover-bg-color: #DEDEDE;
+
+$btn-black-bg-color: $black;
+$btn-black-text-color: $white;
+$btn-black-hover-text-color: #FFF;
+$btn-black-hover-bg-color: lighten($btn-black-bg-color, 5%);
+
+$btn-shadow: 1;
+
+// Font Sizes
+$font-size: 16px;
+$line-height: 1.5;
+$headings: (
+ h1: (
+   mobile: 2.074rem,
+   tablet: 3rem,
+   desktop: 3rem
+ ),
+ h2: (
+   mobile: 1.728rem,
+   tablet: 2.369rem,
+   desktop: 2.5rem
+ ),
+ h3: (
+   mobile: 1.44rem,
+   tablet: 1.777rem,
+   desktop: 1.75rem
+ ),
+ h4: (
+   mobile: 1.2rem,
+   tablet: 1.333rem,
+   desktop: 1.5rem
+ ),
+ h5: (
+   mobile: 1rem,
+   tablet: 1rem,
+   desktop: 1.25rem
+ ),
+ h6: (
+   mobile: 1rem,
+   tablet: 1rem,
+   desktop: 1.125rem
+ )
+);
+
+
+// Mobile Headings From _variables
+@each $heading, $size-map in $headings {
+ #{$heading}, .text-#{$heading} {
+   font-family: $second-font-family;
+   font-weight: 400;
+   color: $font-color;
+   margin-bottom: $unit2;
+   font-size: map-get($size-map, mobile);
+     @include media(">md") {
+     font-size: map-get($size-map, tablet);
+   }
+     @include media(">=xl") {
+     font-size: map-get($size-map, desktop);
+   }
+ }
+}

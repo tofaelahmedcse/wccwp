@@ -1,0 +1,204 @@
+// form styles here
+
+////////////////////////////////
+//DEFAULT SEARCH FORM STYLES///
+//////////////////////////////
+
+.search-form {
+  text-align: right;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  label {
+    margin-bottom: 0;
+    .search-field {
+      height: 32px;
+    }
+  }
+  .screen-reader-text {
+    display: none;
+  }
+  .search-submit {
+    float: right;
+    width: auto;
+    padding: 3px 10px;
+    background: $color-accent-4;
+    border: 1px solid $color-accent-1;
+    border-left: none;
+  }
+}
+
+
+//////////////////////////
+//NINJA FORMS Overrides//
+////////////////////////
+
+
+.nf-error {
+  .nf-error-msg {
+    font-style: italic;
+    font-size: 0.8rem;
+    font-family: $base-font-family;
+  }
+  .nf-field-element input {
+    border: none;
+    border-bottom: 2px solid $color-primary;
+    box-shadow: none;
+  }
+  .ninja-forms-field {
+    border: none!important;
+    border-bottom: 2px solid $color-primary!important;
+  }
+}
+
+.nf-form-errors {
+  font-size: 1rem;
+  padding: $unit1 0;
+}
+
+.nf-form-cont {
+  margin: 0 auto;
+  font-family: $second-font-family;
+  ul {
+    font-size: 1rem;
+    color: $color-accent-3;
+    li {
+      position: relative;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+
+/////////////////////
+// Form Organisms //
+///////////////////
+
+.MultiFile-wrap {
+	width: 100%;
+	input {
+		width: 100% !important;
+	}
+}
+
+//Form uploader
+.file_upload-wrap{
+    label {
+        padding: 5px 0;
+    }
+    .files_uploaded a{
+        color: white;
+
+        padding: 4px;
+        line-height: 1em;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.progress-bar {
+	background-color:#333 !important;
+}
+
+// Phone / Email field toggle
+
+input[type=radio] {
+	display: none;
+	}
+//change ID to apply to appropriate field; add multiple fields by ID
+#nf-field-5-wrap, #nf-field-13-wrap {
+	.nf-field-element ul {
+		text-align: center;
+		width: 100%;
+		 li {
+			float: left;
+			position: relative;
+			display: inline-block;
+			padding: 20px;
+			cursor: pointer;
+      border-radius: $btn-border-radius;
+			&:nth-child(1) {
+				background-color: white;
+				background-image: url('images/envelope_font_awesome.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				border: 2px solid $color-primary;
+        border-radius: $btn-border-radius;
+				width: 49.5%;
+				height: 100px;
+				margin: 0 1% 1% 0!important;
+				@media (min-width: 544px) {
+					width: 49.5%;
+					height: 80px;
+					background-position: 20% 60%;
+				}
+				&.checked {
+					background-color: $color-primary;
+					background-image: url('images/yes-img-white.svg');
+					color: white;
+          label {
+            color: white;
+          }
+				}
+			}
+			&:nth-child(2) {
+				background-color: white;
+				background-image: url('images/phone_font_awesome.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 49.5%;
+				height: 100px;
+				margin: 0 0 1% 0!important;
+				border: 2px solid $color-primary;
+        border-radius: $btn-border-radius;
+				@media (min-width: 544px) {
+					width: 49.5%;
+					height: 80px;
+					background-position: 20% 60%;
+				}
+				&.checked {
+					background-color: $color-primary;
+					background-image: url('images/yes-img-white.svg');
+					color: white;
+          label {
+            color: white;
+          }
+				}
+			}
+			label {
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: 100%;
+				text-align: center;
+				padding-top: 95px;
+				@include media(">=sm") {
+					width: 100%;
+					padding-top: 25px;
+					padding-bottom: 25px;
+					padding-left: 55%;
+					text-align: left;
+				}
+				span {
+					font-size: 1.2rem;
+					color: $color-accent-2;
+				}
+			}
+		}
+	}
+}
+
+
+// .nf-field-container {
+//   &.mui-textfield {
+//     .nf-field-element {
+//       @extend .mui-textfield;
+//       @extend .mui-textfield--float-label;
+//     }
+//   }
+// }

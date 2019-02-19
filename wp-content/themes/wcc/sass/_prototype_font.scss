@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Redacted";
+    src: url("fonts/redacted/web/redacted-regular.eot");
+    src: url("fonts/redacted/web/redacted-regular.woff") format("woff"),
+         url("fonts/redacted/web/redacted-regular.otf") format("opentype"),
+         url("fonts/redacted/web/redacted-regular.svg#filename") format("svg");
+}
+.prototype {
+    font-family: "Redacted";
+    color: #999;
+}
+
+.prototype-script {
+    font-family: "Redacted Script";
+    color: #999;
+}
