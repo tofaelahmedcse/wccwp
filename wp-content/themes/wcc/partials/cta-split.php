@@ -12,13 +12,13 @@ $split_2_button_link=get_field('cta_button_link_right');
 <section class="b-block">
     <div class="container-fluid bg">
         <div class="row bg-row">
-            <div class="col-12 col-md-6 bg-3"></div>
-            <div class="col-12 col-md-6 bg-1"></div>
+            <div class="col-12 col-md-6 bg-3 bg-regal-blue"></div>
+            <div class="col-12 col-md-6 bg-1 bg-endover"></div>
         </div>
     </div>
     <div class="container">
         <div class="row pt-4 pt-md-5 no-gutters">
-            <div class="col-12 mr-lg-auto col-sm-12 col-md-6 col-lg-4 pr-2">
+            <div class="col-12 mr-lg-auto col-sm-12 col-md-6 col-lg-4 pr-2 split-content">
                 <h3><?php echo $split_1_title ?></h3>
                 <p class="<?php if(isPlaceHolder($split_1_text)){echo 'placeholder-text';} ?>"><?php echo $split_1_text ?></p>
                 <p class="mt-5">
@@ -26,7 +26,7 @@ $split_2_button_link=get_field('cta_button_link_right');
                 </p>
             </div>
 
-            <div class="col-12 ml-lh-auto col-sm-12 col-md-6 col-lg-4 ml-sm-auto mt-5 mt-md-0  pl-2">
+            <div class="col-12 ml-lh-auto col-sm-12 col-md-6 col-lg-4 ml-sm-auto mt-5 mt-md-0 split-content">
                 <h3><?php echo $split_2_title ?></h3>
                 <p class="<?php if(isPlaceHolder($split_2_text)){echo 'placeholder-text';} ?>"><?php echo $split_2_text ?></p>
                 <p class="mt-5">

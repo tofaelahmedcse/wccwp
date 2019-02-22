@@ -2840,6 +2840,10 @@ fieldset[disabled] a.btn-primary {
   pointer-events: none;
 }
 
+.owl-dot.active span {
+  background-color: #0061AC !important;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #007bff;
@@ -20636,13 +20640,14 @@ ul li {
 }
 ul li:before {
   display: block;
-  content: "";
+  content: "";
   position: absolute;
   font-family: "Font Awesome 5 Free";
-  top: 8px;
-  left: -10px;
-  font-size: 0.55rem;
-  color: #9f9f9f;
+  top: 0;
+  left: 0;
+  font-size: 0.625rem;
+  line-height: 1.5rem;
+  color: #0061AC;
 }
 ul.nav, ul.navbar-nav {
   padding-left: 0;
@@ -20916,13 +20921,17 @@ a:hover {
   font-weight: 400;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 32px;
   }
 
   h2 {
     font-size: 22px;
+  }
+
+  h4 {
+    font-weight: 700;
   }
 
   #primary .bg-dark p {
@@ -20987,7 +20996,7 @@ a:hover {
     font-size: 26px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .commitment-info h2 {
     font-size: 32px;
   }
@@ -22496,10 +22505,10 @@ input[type=radio] {
 .split-cta .b-block, .split-cta .b-block--half, .split-cta .b-block--bottom {
   padding: 30px 0 70px;
 }
-.split-cta .bg-3 {
+.split-cta .bg-regal-blue {
   background-color: #033975;
 }
-.split-cta .bg-1 {
+.split-cta .bg-endover {
   background-color: #0062ad;
 }
 .split-cta p {
@@ -22507,9 +22516,6 @@ input[type=radio] {
 }
 .split-cta p > a:hover .arrow-circle-right {
   margin-left: 25px;
-}
-.split-cta .pl-2 {
-  padding-left: 0 !important;
 }
 
 .arrow-circle-right {
@@ -22619,24 +22625,22 @@ Home page
 .how-we-work-section .btn-wrap {
   padding-top: 85px;
 }
-.how-we-work-section .btn-wrap a.how-we-work-btn:hover {
+.how-we-work-section .btn-wrap a.btn, .how-we-work-section .btn-wrap a.btn-primary, .how-we-work-section .btn-wrap a.btn-primary--lg, .how-we-work-section .btn-wrap a.btn-primary--sm, .how-we-work-section .btn-wrap a.btn-primary--secondary, .how-we-work-section .btn-wrap a.btn-primary--secondary--lg, .how-we-work-section .btn-wrap a.btn-primary--secondary--sm, .how-we-work-section .btn-wrap a.btn-primary--tertiary, .how-we-work-section .btn-wrap a.btn-primary--tertiary--lg, .how-we-work-section .btn-wrap a.btn-primary--tertiary--sm, .how-we-work-section .btn-wrap a.btn-primary--inverted, .how-we-work-section .btn-wrap a.btn-primary--inverted--lg, .how-we-work-section .btn-wrap a.btn-primary--inverted--sm, .how-we-work-section .btn-wrap a.btn-secondary, .how-we-work-section .btn-wrap a.btn-secondary--sm, .how-we-work-section .btn-wrap a.btn-secondary--lg {
+  width: 340px;
+  height: 56px;
+  background-color: #0061AC;
+  border-color: #0061AC;
+  text-align: center;
+  border-radius: 10px !important;
+  line-height: 56px !important;
+  padding: 0 !important;
+}
+.how-we-work-section .btn-wrap a.btn:hover, .how-we-work-section .btn-wrap a.btn-primary:hover, .how-we-work-section .btn-wrap a.btn-primary--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--sm:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary--sm:hover, .how-we-work-section .btn-wrap a.btn-primary--tertiary:hover, .how-we-work-section .btn-wrap a.btn-primary--tertiary--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--tertiary--sm:hover, .how-we-work-section .btn-wrap a.btn-primary--inverted:hover, .how-we-work-section .btn-wrap a.btn-primary--inverted--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--inverted--sm:hover, .how-we-work-section .btn-wrap a.btn-secondary:hover, .how-we-work-section .btn-wrap a.btn-secondary--sm:hover, .how-we-work-section .btn-wrap a.btn-secondary--lg:hover {
   background-color: #033975;
   color: #FFFFFF;
 }
 .how-we-work-section .owl-carousel {
   display: flex;
-}
-
-.how-we-work-btn {
-  width: 340px;
-  height: 56px;
-  background-color: #0061AC;
-  border-color: #0061AC;
-  color: #FFFFFF;
-  display: inline-block;
-  text-align: center;
-  border-radius: 10px;
-  transition: all 0.3s ease-in;
 }
 
 .world-class-contracting-section .border-text .text {
@@ -22741,7 +22745,7 @@ Home page
   outline: none;
 }
 
-.split-cta .no-gutters .col-lg-4 {
+.split-cta .no-gutters .split-content {
   padding-bottom: 100px;
   position: relative;
 }
@@ -22781,13 +22785,10 @@ Home page
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
+  align-items: flex-start;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-align: center;
   min-height: 105px;
 }
 .our-valuse-info .text-center h3 {
@@ -22870,20 +22871,6 @@ Home page
   padding-left: 20px;
   margin-top: 10px;
 }
-.carousel-block-1 .container ul li::before {
-  content: "";
-  left: 0;
-  width: 10px;
-  height: 10px;
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-  border-radius: 100%;
-  background-color: #0061AC;
-}
 .carousel-block-1 .container .pl-md-6 {
   padding-left: 81px !important;
 }
@@ -22904,8 +22891,9 @@ Home page
 /*
 Contact Page
 ================================================================*/
-.page-template-page-contact p.placeholder-text, .page-template-page-career p.placeholder-text {
-  color: #ffffff !important;
+.page-template-page-contact p.placeholder-text,
+.page-template-page-career p.placeholder-text {
+  color: #FFFFFF !important;
 }
 
 .contact-label {
@@ -23258,9 +23246,10 @@ Our Carrer Page
   margin-left: 6%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   .contracting-info .container .row {
@@ -23553,9 +23542,16 @@ Our Carrer Page
     margin-right: 20px;
   }
 
+  .split-cta .ml-sm-auto {
+    padding-left: 0 !important;
+  }
+  .split-cta .ml-sm-auto p:last-child {
+    left: 0 !important;
+  }
+
   /* End Our experience */
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 481px) {
   .world-skill .random-gallary .img-0,
 .world-skill .random-gallary .img-1,
 .world-skill .random-gallary .img-3 {
@@ -23569,7 +23565,7 @@ Our Carrer Page
     margin-top: 0;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 0) {
   .commitment-info .zed1 p strong {
     font-size: 15px;
   }
@@ -23579,7 +23575,7 @@ Our Carrer Page
     margin: 0;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .organized-info {
     padding-bottom: 60px !important;
   }
@@ -23629,13 +23625,6 @@ Our Carrer Page
     width: 150px;
   }
 
-  .split-cta .ml-sm-auto {
-    padding-left: 30px !important;
-  }
-  .split-cta .ml-sm-auto p:last-child {
-    left: 35px;
-  }
-
   /* Our experience */
   .carousel-block-1 .owl-carousel .owl-nav .owl-prev {
     margin-left: 30px;
@@ -23644,9 +23633,16 @@ Our Carrer Page
     margin-right: 30px;
   }
 
+  .split-cta .ml-sm-auto {
+    padding-left: 30px;
+  }
+  .split-cta .ml-sm-auto p:last-child {
+    left: 35px;
+  }
+
   /* Our experience */
 }
-@media only screen and (min-width: 992px) and (max-width: 1024px) {
+@media (max-width: 1199px) {
   .organized-info {
     padding-bottom: 60px !important;
   }
@@ -24395,7 +24391,7 @@ header .navbar-close-btn.close-btn-show {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   header .navbar .navbar-brand img {
     width: 224px;
   }
@@ -24525,7 +24521,7 @@ header.site-header nav .menu-toggler .menu-close-icon i {
   min-height: 760px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .home #primary .bg-dark {
     min-height: 347px;
   }
@@ -24552,6 +24548,7 @@ footer .navbar-nav-footer {
   }
 }
 footer .navbar-nav-footer li {
+  display: inline-block;
   padding-left: 32px;
 }
 footer .navbar-nav-footer li:first-child {
@@ -24594,28 +24591,24 @@ footer #menu-footer-social a:hover i {
   background: #033975;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   footer .navbar-nav-footer li {
+    display: block;
     padding-left: 0;
   }
-  footer .col-md-10 {
+  footer .footer-menu {
     max-width: 80%;
   }
-  footer .col-md-2 {
+  footer .footer-social {
     max-width: 20%;
   }
-  footer .col-md-2 ul {
+  footer .footer-social ul {
     display: block;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 481px) {
   footer .navbar-nav-footer {
     display: block;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  footer .col-md-10 {
-    max-width: 80.333333%;
   }
 }
 

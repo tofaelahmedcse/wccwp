@@ -14,7 +14,7 @@
   <footer class="b-block footer-small border-0">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 footer-menu">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'  => 'primary',
@@ -26,7 +26,7 @@
                 ));
                 ?>
             </div>
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-2 footer-social">
                 <ul id="menu-footer-social" class="navbar-nav navbar-nav-social">
                 <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-247" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-247 nav-item"><a href="<?php echo  get_theme_mod('facebook_icon');?>" class="nav-link"><i class="fab fa-facebook-f"></i></a>
                 </li>

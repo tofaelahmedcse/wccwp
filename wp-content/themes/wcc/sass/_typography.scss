@@ -11,6 +11,7 @@ Typography and Icons
 @include font-face("Krub", "fonts/krub/Krub-Regular");
 
 
+
 // Any additional heading styles above & beyond what's in variables
 @for $i from 1 through 6 {
     h#{$i} {
@@ -135,6 +136,9 @@ cite {
 
 
 // Bullet styles
+
+
+
 ul {
     list-style: none;
     padding-left: $unit1;
@@ -146,13 +150,14 @@ ul {
 
         &:before {
             display: block;
-            content: "\f0c8";
+            content: "\f111";
             position: absolute;
             font-family: "Font Awesome 5 Free";
-            top: 8px;
-            left: -10px;
-            font-size: .55rem;
-            color: $color-primary;
+            top: 0;
+            left: 0;
+            font-size: 0.625rem;
+            line-height: 1.5rem;
+            color: $endeavour2;
         }
     }
 
@@ -223,7 +228,7 @@ a {
         }
 
         a.btn {
-            font-size: $font-size +2;
+            font-size: $font-size + 2;
         }
     }
 }
@@ -557,13 +562,16 @@ a {
 
 
 // Responsize style 
-@include breakpointed(mobile) {
+@include media("<md") {
     h1 {
         font-size: $font-size * 2;
     }
 
     h2 {
         font-size: $font-size * 1.375;
+    }
+    h4{
+        font-weight: 700;
     }
 
     // Baner style 
@@ -598,6 +606,7 @@ a {
         h2 {
             font-size: $font-size + 16px !important;
             line-height: 56px;
+            
         }
     }
 
@@ -663,7 +672,7 @@ a {
 
 }
 
-@include breakpointed(tablet) {
+@include media("<lg") {
     .commitment-info {
         h2 {
             font-size: $font-size * 2;

@@ -106,7 +106,7 @@ get_header(); ?>
                         <?php endwhile; ?>
                     </div>
                     <div class="btn-wrap col-12 text-center">
-                        <a href="#" class="how-we-work-btn">Learn more about how we work</a>
+                        <a href="#" class="btn">Learn more about how we work</a>
                     </div>
 
                 </div>

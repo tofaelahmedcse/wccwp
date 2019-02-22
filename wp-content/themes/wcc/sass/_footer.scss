@@ -10,6 +10,7 @@ footer {
       flex-direction: row;
     }
       li{
+          display: inline-block;
           padding-left: 32px;
           &:first-child{
               padding-left: 0;
@@ -68,11 +69,13 @@ footer {
     } 
 
 }
-@include breakpointed(mobile) {
+@include media("<md") {
     footer {
 
         .navbar-nav-footer{
-            li{padding-left:0;
+            li{
+                display: block;
+                padding-left:0;
                 a{
                     
                 }
@@ -80,8 +83,8 @@ footer {
             }
 
         }
-         .col-md-10{max-width: 80%;}
-        .col-md-2{
+        .footer-menu{max-width: 80%;}
+        .footer-social{
             max-width: 20%;
             ul{
                 display: block;
@@ -90,7 +93,7 @@ footer {
         }
     }
 }
-@include breakpointed(mobile-landscape) {
+@include media(">xs") {
        footer {
 
         .navbar-nav-footer{
@@ -99,12 +102,5 @@ footer {
 
     }
 }
-@include breakpointed(tablet) {
-       footer {
 
-        .col-md-10{
-            max-width: 80.333333%;
-        }
 
-    }
-}

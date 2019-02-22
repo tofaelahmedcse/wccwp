@@ -4,11 +4,11 @@
         padding: 30px 0 70px;
     }
 
-    .bg-3 {
+    .bg-regal-blue {
         background-color: $regal-blue;
     }
 
-    .bg-1 {
+    .bg-endover {
         background-color: $endeavour;
     }
 
@@ -23,7 +23,6 @@
             }
         }
     }
-    .pl-2{padding-left: 0 !important;}
 }
 
 .arrow-circle-right {
@@ -149,12 +148,24 @@ Home page
         }
     }
 
+    
+    
     .btn-wrap {
         padding-top: 85px;
-        a.how-we-work-btn{
-            
-            &:hover{
-                background-color:$regal-blue; color: $white; 
+
+        a.btn {
+            width: 340px;
+            height: 56px;
+            background-color: $endeavour2;
+            border-color: $endeavour2;
+            text-align: center;
+            border-radius: 10px!important;
+            line-height: 56px!important;
+            padding: 0!important;
+
+            &:hover {
+                background-color:$regal-blue;
+                color: $white;
             }
         }
     }
@@ -162,18 +173,6 @@ Home page
     .owl-carousel {
         display: flex;
     }
-}
-
-.how-we-work-btn {
-    width: 340px;
-    height: 56px;
-    background-color: $endeavour2;
-    border-color: $endeavour2;
-    color: $white;
-    display: inline-block;
-    text-align: center;
-    @include border-radius(10px);
-    @include transition(all .3s ease-in);
 }
 
 .world-class-contracting-section {
@@ -279,33 +278,46 @@ Home page
             }
         }
     }
-      .row{
-        h3{
-            a{position: relative;display: inline-block;padding-right: 80px !important;
-                .arrow-circle-right{
-                    position: absolute; right:20px; top: 50%;@include transform(translateY(-50%));margin-left: 0; 
+
+    .row {
+        h3 {
+            a {
+                position: relative;
+                display: inline-block;
+                padding-right: 80px !important;
+
+                .arrow-circle-right {
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    margin-left: 0;
                     @include transition(all .3s ease-in);
                 }
-                &:hover{
-                    .arrow-circle-right{
-                        right: 0; 
+
+                &:hover {
+                    .arrow-circle-right {
+                        right: 0;
                     }
-                      
+
                 }
             }
-            
+
         }
     }
 }
-.owl-theme{
+
+.owl-theme {
     .owl-dots {
-        .owl-dot{outline:none}
-    }  
+        .owl-dot {
+            outline: none
+        }
+    }
 }
 
 .split-cta {
     .no-gutters {
-        .col-lg-4 {
+        .split-content {
             padding-bottom: 100px;
             position: relative;
 
@@ -345,7 +357,9 @@ Home page
         }
 
         .mb-2 {
-            @include df-align-center;
+            @include displaFlex;
+            align-items: center;
+            -webkit-box-align: center;
             min-height: 105px;
         }
 
@@ -396,77 +410,82 @@ Home page
 
 /* Beginning Our experience */
 
-#location-map{
-    .acf-map{
+#location-map {
+    .acf-map {
         margin: 0;
     }
 }
 
-.bg-light{
-    padding:95px 0 102px;
-    .container{
+.bg-light {
+    padding: 95px 0 102px;
+
+    .container {
         max-width: 1110px;
-        h2{
+
+        h2 {
             margin-bottom: 0;
         }
     }
-    .industry-info{
-        margin-top:65px;
+
+    .industry-info {
+        margin-top: 65px;
         @include displaFlex;
-        .text-center{
-            margin-top:25px;
-            padding:0 5px;
+
+        .text-center {
+            margin-top: 25px;
+            padding: 0 5px;
         }
-        .rounded-img{
-            width:72px;
+
+        .rounded-img {
+            width: 72px;
             height: 72px;
         }
     }
 
 }
-.carousel-block-1{
-    .container{
-        h4{
-            
-        }
-        p{
+
+.carousel-block-1 {
+    .container {
+        h4 {}
+
+        p {
             margin-bottom: 35px;
         }
-        ul{
-            padding-left:0;
-            li{ padding-left: 20px;
-                margin-top:10px;
-                &::before{
-                    @include beforeAfter(
-                        $width: 10px,
-                        $height: 10px,
-                        );
-                    @include centerTop;
-                    @include border-radius(100%);
-                    background-color: $endeavour2;
-                }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                padding-left: 20px;
+                margin-top: 10px;
             }
         }
-        
-        .pl-md-6{
-            padding-left:81px!important;
+
+        .pl-md-6 {
+            padding-left: 81px !important;
         }
     }
-    .custom-container{max-width: 1220px;}
-    .owl-carousel{
-        .owl-nav{
-            .owl-prev{
-                margin-left:94px;
+
+    .custom-container {
+        max-width: 1220px;
+    }
+
+    .owl-carousel {
+        .owl-nav {
+            .owl-prev {
+                margin-left: 94px;
             }
-            .owl-next{
+
+            .owl-next {
                 margin-right: 94px;
             }
         }
-        .owl-item{
-            .item{
+
+        .owl-item {
+            .item {
                 background-position: center center;
             }
-        } 
+        }
     }
 }
 
@@ -482,9 +501,10 @@ Home page
 Contact Page
 ================================================================*/
 
-.page-template-page-contact, .page-template-page-career {
+.page-template-page-contact,
+.page-template-page-career {
     p.placeholder-text {
-        color: #ffffff !important;
+        color: $white !important;
     }
 }
 
@@ -707,7 +727,7 @@ Our Carrer Page
                             @include border-radius(100%);
                             @include transform(translateY(-50%));
                         }
-                        
+
                         &:hover {
                             color: $denim;
                         }
@@ -862,9 +882,10 @@ Our Carrer Page
             }
         }
     }
-        .list-info{
-        p{
-            font-size: $font-size - 2 ;
+
+    .list-info {
+        p {
+            font-size: $font-size - 2;
         }
     }
 }
@@ -980,9 +1001,10 @@ Our Carrer Page
 
 
 
-@include breakpointed(mobile) {
+@include media("<md") {
     h2 {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
     .contracting-info {
@@ -1321,7 +1343,8 @@ Our Carrer Page
                 margin-top: 46px !important;
             }
         }
-        .pr-2{
+
+        .pr-2 {
             padding-right: 0 !important;
         }
     }
@@ -1341,54 +1364,71 @@ Our Carrer Page
 
     /* End our carrer */
     /* Beginnng Our experience */
-    
-    .bg-light{
-        padding:30px 0 30px;
-        .industry-info{
+
+    .bg-light {
+        padding: 30px 0 30px;
+
+        .industry-info {
             margin-top: 20px;
-            
+
         }
     }
-    .carousel-block-1{
-        .b-block{
-            padding:0;
+
+    .carousel-block-1 {
+        .b-block {
+            padding: 0;
         }
-        .container{
-            p{
-                margin-bottom:20px;
+
+        .container {
+            p {
+                margin-bottom: 20px;
             }
-            .pl-md-6{
-                padding-left: 15px!important;
+
+            .pl-md-6 {
+                padding-left: 15px !important;
             }
-            ul{
-                margin-bottom:0;
+
+            ul {
+                margin-bottom: 0;
             }
-            .equal-carousel{
+
+            .equal-carousel {
                 display: inline-block;
-                height: 330px!important;
+                height: 330px !important;
             }
-            
+
         }
-        .owl-carousel{
-            .owl-nav{
-                .owl-prev{
-                    margin-left:20px;
+
+        .owl-carousel {
+            .owl-nav {
+                .owl-prev {
+                    margin-left: 20px;
                 }
-                .owl-next{
+
+                .owl-next {
                     margin-right: 20px;
                 }
-            } 
+            }
         }
     }
-    
-    
+    .split-cta {
+        .ml-sm-auto {
+            padding-left: 0 !important;
+
+            p:last-child {
+                left: 0 ! important;
+            }
+        }
+    }
+
+
     /* End Our experience */
 
 }
 
 
 
-@include breakpointed(mobile-landscape) {
+@include media(">xs") {
     .world-skill {
         .random-gallary {
 
@@ -1403,10 +1443,11 @@ Our Carrer Page
             }
         }
     }
+
     .benefit-section {
         .row {
-            .text-center{
-                &:nth-child(2){
+            .text-center {
+                &:nth-child(2) {
                     margin-top: 0;
                 }
             }
@@ -1414,7 +1455,7 @@ Our Carrer Page
     }
 }
 
-@include breakpointed(sm-mobile) {
+@include media(">xxs") {
     .commitment-info {
         .zed1 {
             p {
@@ -1439,7 +1480,7 @@ Our Carrer Page
     }
 }
 
-@include breakpointed(tablet) {
+@include media("<lg") {
     .organized-info {
         padding-bottom: 60px !important;
 
@@ -1510,7 +1551,7 @@ Our Carrer Page
                 }
             }
         }
-   
+
     }
 
     .page-template-page-why-wcc-php {
@@ -1520,34 +1561,38 @@ Our Carrer Page
             }
         }
     }
-         .split-cta{
-             .ml-sm-auto{
-                 padding-left: 30px !important;
-              p:last-child{
-                    left: 35px;
-            }   
-             }
-        } 
+
+
     /* Our experience */
-    
-    .carousel-block-1{
-        .owl-carousel{
-            .owl-nav{
-                .owl-prev{
-                    margin-left:30px;
+
+    .carousel-block-1 {
+        .owl-carousel {
+            .owl-nav {
+                .owl-prev {
+                    margin-left: 30px;
                 }
-                .owl-next{
+
+                .owl-next {
                     margin-right: 30px;
                 }
-            } 
+            }
         }
-        
+
     }
-    
+     .split-cta {
+        .ml-sm-auto {
+            padding-left: 30px;
+
+            p:last-child {
+                left: 35px;
+            }
+        }
+    }
+
     /* Our experience */
 }
 
-@include breakpointed(tablet-landscape) {
+@include media("<xl") {
     .organized-info {
         padding-bottom: 60px !important;
 
