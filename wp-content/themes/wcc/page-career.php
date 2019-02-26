@@ -31,20 +31,20 @@ get_header(); ?>
 
             <section class="b-block benefit-section">
                 <div class="container">
-                    <div class="row mb-5 justify-content-center text-center">
+                    <div class="row mb-5 justify-content-center text-center benefit-row-1">
                         <div class="col-12 col-md-10 col-lg-9">
                             <p><?php echo $section_2_text ?></p>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row benefit-row">
                         <?php while (have_rows('section_2_features')):the_row();
                             $title = get_sub_field('headline');
                             $text = get_sub_field('text');
                             $img = get_sub_field('icon');
                             ?>
-                            <div class="col-12 col-sm-6 col-md-3 text-center">
-                                <div class="mb-2">
+                            <div class="col-12 col-sm-6 col-md-3 text-center benefit-row-col">
+                                <div class="mb-2 benefit-row-col-icon">
                                     <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
                                 </div>
 
@@ -58,8 +58,8 @@ get_header(); ?>
 
             <section class="b-block bg-4 contact-content our-carrer-form">
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-sm-6 col-md-5">
+                    <div class="row align-items-center contact-row">
+                        <div class="col-12 col-sm-6 col-md-5 our-carrer-row">
 
                             <div class="row mb-5">
                                 <div class="col-12">
@@ -123,7 +123,7 @@ get_header(); ?>
 
                         </div>
 
-                        <div class="col-12 col-sm-6 col-md-7 bg-1 pt-3 pb-1">
+                        <div class="col-12 col-sm-6 col-md-7 bg-1 pt-3 pb-1 contact-row-col-2">
                             <h3>Apply Now</h3>
                             <?php ninja_forms_display_form('2') ?>
                         </div>

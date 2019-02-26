@@ -26,14 +26,14 @@ get_header(); ?>
 
             <section class="b-block world-class-contracting-section">
                 <div class="container">
-                    <div class="row pb-5">
+                    <div class="row pb-5 contracting-row">
                         <div class="col-md-10 col-12">
                             <p class="lead"><?php echo $section_2_lead_text ?></p>
                             <h2><?php echo $section_2_headline ?></h2>
                         </div>
                     </div>
 
-                    <div class="row mt-5">
+                    <div class="row mt-5 contracting-row-second">
                         <div class="col-md-8 col-12">
                             <div class="border-text pl-5">
                                 <div class="text pl-4">
@@ -49,7 +49,7 @@ get_header(); ?>
 
             <section class="b-block pt-0 masonary">
                 <div class="container-fluid px-0">
-                    <div class="row mb-5">
+                    <div class="row mb-5 masonary-row">
                         <div class="card-columns grid-wrap">
                             <?php $i=1; while (have_rows('section_3')):the_row();
                             $img=get_sub_field('image');
@@ -70,10 +70,10 @@ get_header(); ?>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row masonary-row">
                         <div class="col-12 text-center">
                             <h3>
-                                <a href="<?php echo $section_3_button['url'] ?>"><?php echo $section_3_button['title'].' ' ?><span class="arrow-circle-right"><img src="<?php echo get_template_directory_uri(); ?>/images/circle-arrow-right-blue@2x.png" alt=""></span></a>
+                                <a href="<?php echo $section_3_button['url'] ?>"><?php echo $section_3_button['title'].' ' ?><span class="arrow-circle-right"><i class="fa fa-arrow-right"></i></span></a>
                             </h3>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ get_header(); ?>
                             $img = get_sub_field('image');
                             ?>
                             <div class="col-md-6 col-lg-3 col-12 text-center mt-5">
-                                <div class="mb-2">
+                                <div class="mb-2 work-icon">
                                     <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
                                 </div>
 
@@ -106,7 +106,7 @@ get_header(); ?>
                         <?php endwhile; ?>
                     </div>
                     <div class="btn-wrap col-12 text-center">
-                        <a href="#" class="btn">Learn more about how we work</a>
+                        <a href="#" class="btn btn-primary--secondary--sml">Learn more about how we work</a>
                     </div>
 
                 </div>
@@ -121,11 +121,11 @@ get_header(); ?>
                             <h6><?php echo $section_5_sub_heading ?></h6>
                         </div>
                     </div>
-                    <div class="row mt-5 align-items-center">
+                    <div class="row mt-5 align-items-center support-row">
                         <?php while (have_rows('section_5_images')):the_row();
                             $img = get_sub_field('image');
                             ?>
-                            <div class="col-md-3 col-sm-4 col-6">
+                            <div class="col-md-3 col-sm-4 col-6 row-col">
                                 <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
                             </div>
                         <?php endwhile; ?>

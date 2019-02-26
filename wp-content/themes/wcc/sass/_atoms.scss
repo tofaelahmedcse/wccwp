@@ -104,9 +104,22 @@ Atoms
   }
 }
 
-        .btn-primary--secondary--lg, a.btn-primary--secondary--lg {
-          @extend .btn-primary--secondary;
-          padding: $btn-padding-lg;
+        .btn-primary--secondary--lg,
+        a.btn-primary--secondary--lg {
+            @extend .btn-primary--secondary;
+            padding: $btn-padding-lg;
+        }
+
+        .btn-primary--secondary--sml,
+        a.btn-primary--secondary--sml {
+            @extend .btn-primary--secondary;
+            padding: $btn-padding-sml;
+
+            &:hover,
+            &:focus {
+                background-color: darken($color-secondary, 7%);
+                border-color: darken($color-secondary, 7%);
+            }
         }
 
         .btn-primary--secondary--sm, a.btn-primary--secondary--sm {

@@ -1,5 +1,10 @@
 /* Splite cta section style */
 .split-cta {
+    .split-content {
+        padding-bottom: 100px;
+        position: relative;
+    }
+
     .b-block {
         padding: 30px 0 70px;
     }
@@ -18,153 +23,121 @@
         > a {
             &:hover {
                 .arrow-circle-right {
-                    margin-left: 25px;
+                    margin-left: $unit3;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-top: 0 !important;
+        }
+
+    }
+
+    .arrow-circle-right {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        vertical-align: middle;
+        @include border-radius(50%);
+        overflow: hidden;
+        margin-left: $u-25;
+        @include transition(all .3s ease-in);
+        text-align: center;
+        background-color: $white;
+        i{
+            line-height: 48px;
+            color: $denim;
+        }
+    }
+
+    @include media("<md") {
+        text-align: center;
+
+        .split-content {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+
+            p {
+                &:last-child {
+                    position: inherit;
+                    margin-top: $unit6 - 2px !important;
+                    left: 0 !important;
+                }
+            }
+        }
+
+        .b-block {
+            padding: 0;
+        }
+    }
+
+    @include media("<=lg") {
+        .split-content {
+            padding-left: $unit4;
+
+            p {
+                &:last-child {
+                    left: 32px;
                 }
             }
         }
     }
-}
 
-.arrow-circle-right {
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    vertical-align: middle;
-    @include border-radius(50%);
-    overflow: hidden;
-    margin-left: 20px;
-    @include transition(all .3s ease-in);
 }
 
 img {
     max-width: 100%;
 }
 
-// Support section
-.support-section {
-    background: $depp-gray;
-    padding: 100px 0;
-
-    .text-center {
-        h2 {
-            color: $regal-blue;
-        }
-
-        p {
-            margin-top: 36px;
-            padding: 0 90px;
-        }
-    }
-
-    .align-items-center {
-        margin-top: 60px !important;
-
-        img {
-            @include filter(grayscale, 100%);
-        }
-    }
-
-    h6 {
-        color: $comet;
-        margin-top: 16px;
-    }
-}
-
-.home .support-section {
-    background-color: $white;
-}
-
-// Contact info 
-.contracting-info {
-    .container {
-        .row {
-            padding-left: 40px;
-            text-align: left;
-
-            .text-center {
-                text-align: left !important;
-            }
-        }
-
-        .row.justify-content-center {
-            max-width: 960px;
-            text-align: left;
-            padding: 0;
-            position: relative;
-
-            .col-md-10 {
-                display: block;
-                padding: 20px 0 20px 60px;
-                max-width: 100%;
-
-                &::before {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 5px;
-                    bottom: 0;
-                    content: '';
-                    background: $deep-blue;
-                }
-            }
-        }
-    }
-}
-
-
 /* 
 Home page
 ================================================================ */
-.masonary h3 {
-    color: $comet;
-    margin-top: 30px;
-    margin-bottom: 0;
-}
 
+/* 
+how we work section
+================================================================ */
 .how-we-work-section {
-    padding: 100px 0;
     background-color: $athens-gray;
 
     h2 {
         color: $regal-blue;
-        margin-bottom: 70px;
+        margin-bottom: $unit9 - 2px;
     }
 
     h4 {
-        color: $endeavour2;
-        margin-top: 45px;
-        margin-bottom: 20px;
+        color: $denim;
+        margin-top: $unit6 - 3px;
+        margin-bottom: $u-25;
     }
 
-    .mb-2 {
+    .work-icon {
         min-height: 110px;
     }
 
     p {
-        margin-bottom: 20px;
+        margin-bottom: $u-25;
 
         &:last-child {
             margin-bottom: 0;
         }
     }
 
-    
-    
+
+
     .btn-wrap {
         padding-top: 85px;
 
         a.btn {
             width: 340px;
             height: 56px;
-            background-color: $endeavour2;
-            border-color: $endeavour2;
-            text-align: center;
-            border-radius: 10px!important;
-            line-height: 56px!important;
-            padding: 0!important;
+            @include border-radius(10px);
 
             &:hover {
-                background-color:$regal-blue;
                 color: $white;
             }
         }
@@ -173,22 +146,173 @@ Home page
     .owl-carousel {
         display: flex;
     }
+
+    @include media("<md") {
+        padding-top: $unit5;
+        padding-bottom: $unit6 + 2px;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .btn-wrap {
+            display: none;
+        }
+
+        .owl-carousel {
+            margin: 0;
+
+            .owl-item {
+                margin-right: 0px !important;
+
+                img {
+                    max-width: 200px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
 }
+
+/* 
+world class contracting section
+================================================================ */
 
 .world-class-contracting-section {
     .border-text {
         .text {
-            border-color: $endeavour2;
+            border-color: $denim;
 
             p {
                 color: $comet;
             }
         }
     }
+
+    @include media("<md") {
+        padding-top: 6px;
+        padding-bottom: 35px !important;
+
+        .border-text {
+            .text {
+                padding-left: 0 !important;
+            }
+        }
+
+        .contracting-row {
+            padding-bottom: 0 !important;
+            margin-top: $unit3 + 2px !important;
+        }
+
+        .contracting-row-second {
+            margin-top: $unit4 - 2px !important;
+        }
+
+        .contracting-row {
+            padding-bottom: 0 !important;
+            margin-top: $unit3 + 2px !important;
+        }
+    }
 }
 
 
 // Grid style 
+
+
+
+
+.grid-wrap {
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: 'box-1 box-3 box 4''box-2 box-3 box 5';
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    .card {
+        min-width: 33.33333333333333vw;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        .img {
+            height: 100%;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .card.grid-item-3 {
+        height: 100%;
+        max-height: 670px;
+
+        .img {
+            max-height: 100%;
+        }
+    }
+}
+
+.grid-item-1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 400px;
+}
+
+.grid-item-2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    height: 270px;
+}
+
+.grid-item-3 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    height: 670px;
+}
+
+.grid-item-4 {
+    -ms-grid-column: 3;
+    grid-column: 3/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 270px;
+}
+
+.grid-item-5 {
+    -ms-grid-column: 3;
+    grid-column: 3/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    height: 400px;
+    margin-top: -130px;
+}
+
+
+
+/*
 .grid-wrap {
     display: grid;
     //grid-template-columns: 1fr 1fr 1fr;
@@ -258,7 +382,7 @@ Home page
     grid-row: 2/3;
     height: 400px;
     margin-top: -130px;
-}
+}*/
 
 .masonary {
     .card-columns {
@@ -279,8 +403,13 @@ Home page
         }
     }
 
-    .row {
+    .masonary-row {
         h3 {
+
+            color: $comet;
+            margin-top: $unit4 - 2px;
+            margin-bottom: 0;
+
             a {
                 position: relative;
                 display: inline-block;
@@ -293,6 +422,20 @@ Home page
                     @include transform(translateY(-50%));
                     margin-left: 0;
                     @include transition(all .3s ease-in);
+                    width: 48px;
+                    height: 48px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    @include border-radius(50%);
+                    overflow: hidden;
+                    margin-left: $u-25;
+                    @include transition(all .3s ease-in);
+                    background-color: $denim;
+                    i {
+                        font-size: $font-size + 4px;
+                        line-height: 48px;
+                        color: $white;
+                    }
                 }
 
                 &:hover {
@@ -305,32 +448,24 @@ Home page
 
         }
     }
+
+    @include media("<md") {
+        padding-bottom: 0;
+
+        .masonary-row {
+            margin-bottom: 0 !important;
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
 }
 
 .owl-theme {
     .owl-dots {
         .owl-dot {
             outline: none
-        }
-    }
-}
-
-.split-cta {
-    .no-gutters {
-        .split-content {
-            padding-bottom: 100px;
-            position: relative;
-
-        }
-    }
-
-    p {
-        &:last-child {
-            margin-bottom: 0;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            margin-top: 0 !important;
         }
     }
 }
@@ -345,18 +480,18 @@ Home page
         max-width: 1124px;
     }
 
-    .justify-content-center {
+    .our-value-row {
         margin: 0;
     }
 
-    .text-center {
-        margin-top: 96px;
+    .our-value-info-col {
+        margin-top: $unit12;
 
         &:nth-child(-n+3) {
-            margin-top: 82px;
+            margin-top: $unit10 + 2px;
         }
 
-        .mb-2 {
+        .value-info-col-inner {
             @include displaFlex;
             align-items: center;
             -webkit-box-align: center;
@@ -364,11 +499,23 @@ Home page
         }
 
         h3 {
-            margin-top: 30px;
+            margin-top: $unit4 - 2px;
         }
 
         p {
             margin: 20px 0 0 0;
+        }
+    }
+
+    @include media("<md") {
+        padding-bottom: $unit4 - 2px;
+
+        .our-valuse-info-col {
+            margin-top: $unit5;
+
+            &:nth-child(-n+3) {
+                margin-top: $unit5;
+            }
         }
     }
 }
@@ -377,8 +524,8 @@ Home page
 .our-values-health-safety {
     padding: 104px 0;
 
-    .mb-5 {
-        margin-top: 117px;
+    .health-safety-container {
+        margin-top: $unit14 + 3px;
         margin-bottom: 0 !important;
 
         &:first-child {
@@ -403,6 +550,26 @@ Home page
             margin-top: 0;
         }
     }
+
+    @include media("<md") {
+        padding: 40px 0;
+        text-align: center;
+
+        .mb-5 {
+            margin-top: $unit4 - 2px;
+
+        }
+
+        .s-image {
+            margin-top: $unit4 - 2px;
+            padding-left: $unit2 - 1px;
+        }
+
+        .m-image {
+            padding-right: $unit2 - 1px;
+            margin-bottom: $unit4 - 2px;
+        }
+    }
 }
 
 /* End  page-our-values 
@@ -416,7 +583,7 @@ Home page
     }
 }
 
-.bg-light {
+.industry-section {
     padding: 95px 0 102px;
 
     .container {
@@ -431,7 +598,7 @@ Home page
         margin-top: 65px;
         @include displaFlex;
 
-        .text-center {
+        .industry-col {
             margin-top: 25px;
             padding: 0 5px;
         }
@@ -442,11 +609,19 @@ Home page
         }
     }
 
+    @include media("<md") {
+        padding: 30px 0 30px;
+
+        .industry-info {
+            margin-top: $unit2 + $halfunit;
+
+        }
+    }
+
 }
 
 .carousel-block-1 {
     .container {
-        h4 {}
 
         p {
             margin-bottom: 35px;
@@ -457,12 +632,12 @@ Home page
 
             li {
                 padding-left: 20px;
-                margin-top: 10px;
+                margin-top: $unit1 + 2px;
             }
         }
 
-        .pl-md-6 {
-            padding-left: 81px !important;
+        .commercial {
+            padding-left: $unit10 + 1px !important;
         }
     }
 
@@ -473,11 +648,11 @@ Home page
     .owl-carousel {
         .owl-nav {
             .owl-prev {
-                margin-left: 94px;
+                margin-left: $unit12 - 2px;
             }
 
             .owl-next {
-                margin-right: 94px;
+                margin-right: $unit12 - 2px;
             }
         }
 
@@ -486,6 +661,59 @@ Home page
                 background-position: center center;
             }
         }
+    }
+
+    @include media("<md") {
+        .b-block {
+            padding: 0;
+        }
+
+        .container {
+            p {
+                margin-bottom: $unit2 + $halfunit;
+            }
+
+            .commercial {
+                padding-left: $unit2 - 1px !important;
+            }
+
+            ul {
+                margin-bottom: 0;
+            }
+
+            .equal-carousel {
+                display: inline-block;
+                height: 330px !important;
+            }
+
+        }
+
+        .owl-carousel {
+            .owl-nav {
+                .owl-prev {
+                    margin-left: $unit2 + $halfunit;
+                }
+
+                .owl-next {
+                    margin-right: $unit2 + $halfunit;
+                }
+            }
+        }
+    }
+
+    @include media("<lg") {
+        .owl-carousel {
+            .owl-nav {
+                .owl-prev {
+                    margin-left: $unit4 - 2px;
+                }
+
+                .owl-next {
+                    margin-right: $unit4 - 2px;
+                }
+            }
+        }
+
     }
 }
 
@@ -518,18 +746,18 @@ Contact Page
 }
 
 .contact-content {
-    .row {
+    .contact-row {
         align-items: center;
 
-        .col-md-5 {
+        .contact-row-col-1 {
             h3 {
                 color: $denim;
             }
 
-            .mb-5 {
-                .col-12 {
+            .row-contact {
+                .contact-col {
                     .row {
-                        margin-top: 8px;
+                        margin-top: $unit1;
 
                         .contact-details {
                             color: $comet;
@@ -539,7 +767,7 @@ Contact Page
             }
         }
 
-        .col-md-7 {
+        .contact-row-col-2 {
             padding: 0 35px 0 90px;
             background-color: $denim;
             position: relative;
@@ -559,14 +787,14 @@ Contact Page
             }
 
             .nf-form-title {
-                margin-top: 28px;
+                margin-top: $unit3 + $halfunit;
                 float: left;
                 width: 100%;
             }
 
             .nf-row {
                 width: 48%;
-                margin-top: 40px;
+                margin-top: $unit5;
 
                 &:first-child {
                     margin-right: 3.888888888888889%;
@@ -593,6 +821,40 @@ Contact Page
             }
         }
     }
+
+    @include media("<md") {
+        .contact-row {
+            .contact-row-col-1 {
+                padding: 0 30px;
+            }
+
+            .contact-row-col-2 {
+                padding: 0 30px;
+
+                .nf-row {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    @include media("<lg") {
+        .contact-row {
+            .contact-row-col-2 {
+                .nf-row {
+                    width: 100%;
+                    margin: 0;
+
+                    &:first-child {
+                        margin-right: $unit2 + 1px;
+                    }
+                }
+            }
+        }
+
+    }
+
 }
 
 
@@ -604,7 +866,7 @@ Contact Page
 
     h4 {
         color: $regal-blue;
-        margin-top: 40px;
+        margin-top: $unit5;
     }
 
     p {
@@ -613,7 +875,7 @@ Contact Page
 
     .wrap-link {
         color: $comet;
-        margin-top: 60px;
+        margin-top: $unit8 - $halfunit;
         display: block;
     }
 }
@@ -626,8 +888,8 @@ Contact Page
         color: $white;
     }
 
-    .row.project-content {
-        margin-top: 60px;
+    .project-content {
+        margin-top: $unit8 - $halfunit;
         align-items: center;
         position: relative;
 
@@ -641,33 +903,75 @@ Contact Page
             left: 49.2%;
         }
 
-        .col-lg-5 {
+        .project-col {
             max-width: 37%;
-            padding-right: 30px;
+            padding-right: $unit4 - 2px;
         }
 
         .offset-lg-1 {
             margin-left: 12.333333%;
         }
 
-        .col-lg-6 {
-            padding-left: 30px;
+        .project-col-1 {
+            padding-left: $unit4 - 2px;
 
             p {
                 &:first-child {
                     span.contact-label {
-                        margin-right: 76px
+                        margin-right: $unit9 + 4px;
                     }
                 }
 
                 &:last-child {
                     span.contact-label {
-                        margin-right: 16px
+                        margin-right: $unit2;
                     }
                 }
 
                 a.contact-details {
                     color: $white;
+                }
+            }
+        }
+    }
+
+    @include media("<md") {
+        .project-content {
+            margin-top: $unit2 + $halfunit;
+
+            &::after {
+                display: none;
+            }
+
+            .project-col,
+            .project-col-1 {
+                max-width: 100%;
+                margin: 0;
+                padding: 0 15px;
+                text-align: center;
+            }
+
+            .project-col-1 {
+                margin-top: $unit2 + $halfunit;
+
+                p {
+                    &:first-child {
+                        span.contact-label {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(">=xxs") {
+        .project-content {
+            .project-col-1 {
+                p {
+                    a.contact-details {
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -680,15 +984,15 @@ Contact Page
 Our Carrer Page
 ================================================================*/
 .benefit-section {
-    .text-center {
+    .benefit-row-1 {
         p {
             color: $comet;
         }
     }
 
-    .col-md-3 {
+    .benefit-row {
 
-        .mb-2 {
+        .benefit-row-col-icon {
             min-height: 67px;
         }
 
@@ -696,16 +1000,42 @@ Our Carrer Page
             color: $midnight-express;
         }
     }
+
+    @include media("<md") {
+        .benefit-row {
+            .benefit-row-col {
+                margin-top: $unit3 + 1px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @include media(">=xs") {
+        .benefit-row {
+            .benefit-row-col {
+                &:nth-child(2) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 
 .our-carrer-form {
     p {
-        margin-top: 25px;
+        margin-top: $unit3 + 1px;
         color: $comet;
     }
 
-    .col-md-5 {
-        padding-right: 30px;
+    .our-carrer-row {
+        padding-right: $unit4 - 2px;
+
+        h3 {
+            color: $denim;
+        }
 
         #careers-accordion {
             .card {
@@ -713,7 +1043,7 @@ Our Carrer Page
                     button {
                         color: $regal-blue;
                         outline: none;
-                        padding-left: 25px;
+                        padding-left: $unit3 + 1px;
                         position: relative;
 
                         &::before {
@@ -737,8 +1067,8 @@ Our Carrer Page
         }
     }
 
-    .col-md-7 {
-        padding-top: 66px !important;
+    .contact-row-col-2 {
+        padding-top: $unit8 + 2px !important;
 
         .nf-row {
             &:nth-last-of-type(-n+3) {
@@ -747,7 +1077,7 @@ Our Carrer Page
             }
 
             &:nth-last-of-type(2) {
-                margin-top: 10px;
+                margin-top: $unit1 + 2px;
             }
 
             .nf-fu-progress {
@@ -775,50 +1105,9 @@ Our Carrer Page
         color: $comet;
     }
 
-    .split-cta,
-    .bg-dark {
+    .split-cta {
         p {
             color: $white;
-        }
-    }
-}
-
-.contracting-info {
-    h2 {
-        color: $midnight-express;
-    }
-
-    .container {
-        .row {
-            padding-left: 40px;
-            text-align: left;
-
-            .text-center {
-                text-align: left !important;
-            }
-        }
-
-        .row.justify-content-center {
-            max-width: 960px;
-            text-align: left;
-            padding: 0;
-            position: relative;
-
-            .col-md-10 {
-                display: block;
-                padding: 20px 0 20px 60px;
-                max-width: 100%;
-
-                &::before {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 5px;
-                    bottom: 0;
-                    content: '';
-                    background: $deep-blue;
-                }
-            }
         }
     }
 }
@@ -832,21 +1121,21 @@ Our Carrer Page
         .title-info {
             padding: 0 40px;
 
-            .col-12 {
+            .organized-col {
                 padding: 0 30px;
             }
         }
     }
 
-    .mt-5 {
-        margin-top: 60px !important;
+    .organized-row {
+        margin-top: $unit8 - 4px !important;
 
-        .col-6 {
+        .organized-col {
             padding: 0 5% !important;
             width: 100%;
 
             p {
-                margin-bottom: 30px !important;
+                margin-bottom: $unit4 - 2px !important;
             }
 
             ul {
@@ -855,6 +1144,7 @@ Our Carrer Page
                     font-size: $font-size - 2;
                     font-family: $fourth-font-family;
                     font-weight: 700;
+                    padding-left: $unit2 + 4px;
 
                     &:before {
                         background: $deep-blue !important;
@@ -862,6 +1152,7 @@ Our Carrer Page
                         width: 8px;
                         height: 8px;
                         @include border-radius;
+                        @include centerTop;
                     }
                 }
 
@@ -888,261 +1179,8 @@ Our Carrer Page
             font-size: $font-size - 2;
         }
     }
-}
 
-.page-template-page-why-wcc-php {
-    .equal-section {
-        height: 480px;
-
-        .container {
-            height: 100%;
-
-            .row {
-                height: 100%;
-            }
-        }
-
-    }
-
-    .random-gallary {
-        .img-3 {
-            width: 270px;
-        }
-    }
-}
-
-.commitment-info {
-    background: $depp-gray;
-
-    h2 {
-        margin-bottom: 20px;
-        color: $regal-blue;
-    }
-
-    .zed1 {
-        max-width: 46%;
-
-        p {
-            &:last-child {
-                max-width: 320px;
-                padding: 20px 20px 50px !important;
-                background: $white;
-                margin-top: 50px;
-            }
-
-            strong {
-                float: left;
-                width: 100%;
-                font-size: 16px;
-                color: $deep-blue;
-                margin-top: 6px;
-            }
-        }
-    }
-
-}
-
-
-.history-info {
-    background: $depp-gray;
-
-    h2 {
-        margin-bottom: 25px;
-        color: $regal-blue;
-    }
-
-    .zed1 p {
-        padding-right: 55px;
-    }
-}
-
-.support-section {
-    background: $depp-gray;
-    padding: 100px 0;
-
-    .text-center {
-        h2 {
-            color: $regal-blue;
-        }
-
-        p {
-            margin-top: 36px;
-            padding: 0 90px;
-        }
-    }
-
-    .align-items-center {
-        margin-top: 60px
-    }
-}
-
-
-.world-skill {
-    padding-bottom: 200px;
-
-    h2 {
-        color: $regal-blue;
-    }
-
-    .mt-5 {
-        margin-top: 115px !important;
-
-        .col-12 {
-            &:last-child {
-                max-width: 40%;
-                padding-left: 50px;
-                margin-left: 6%;
-            }
-        }
-    }
-
-}
-
-
-
-
-@include media("<md") {
-    h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
-    .contracting-info {
-        .container {
-            .row {
-                padding-left: 0px;
-            }
-        }
-
-        .row.justify-content-center {
-            .col-md-10 {
-                padding: 0 20px !important;
-
-                &::before {
-                    display: none;
-                }
-            }
-        }
-    }
-
-
-    header {
-        .navbar {
-            .navbar-brand {
-                -webkit-box-ordinal-group: 2;
-                -webkit-order: 2;
-                -moz-order: 2;
-                -ms-order: 2;
-                order: 2;
-                margin-right: 0;
-            }
-        }
-    }
-
-
-    .world-class-contracting-section {
-        padding-top: 6px;
-        padding-bottom: 35px !important;
-
-        .border-text,
-        .text {
-            padding-left: 0 !important;
-        }
-
-        .mt-5 {
-            margin-top: 30px !important;
-        }
-    }
-
-
-    // World class contracting section style 
-    .world-class-contracting-section {
-        .pb-5 {
-            padding-bottom: 0 !important;
-            margin-top: 26px !important;
-        }
-    }
-
-    .grid-wrap {
-        .card {
-            width: 100vw;
-            height: 273px;
-            display: none;
-
-            &:nth-child(-n + 3) {
-                display: block;
-            }
-
-            &.grid-item-2 {
-                height: 245px;
-            }
-
-            &.grid-item-3 {
-                height: 238px;
-                grid-column: 1/2;
-                grid-row: 3/4;
-            }
-        }
-
-    }
-
-    .masonary {
-        padding-bottom: 0;
-
-        .row {
-            margin-bottom: 0 !important;
-
-            &:nth-child(2) {
-                display: none;
-            }
-        }
-    }
-
-    // How we work section
-    .how-we-work-section {
-        padding-top: 40px;
-        padding-bottom: 50px;
-
-        h2 {
-            margin-bottom: 0;
-        }
-
-        .btn-wrap {
-            display: none;
-        }
-
-        .owl-carousel {
-            margin: 0;
-
-            .owl-item {
-                margin-right: 0px !important;
-
-                img {
-                    max-width: 200px;
-                    margin: 0 auto;
-                }
-            }
-        }
-    }
-
-    .commitment-info {
-        .zed1 {
-            max-width: 100%;
-            padding-left: 0px !important;
-            padding: 0 20px !important;
-
-            p {
-                &:last-child {
-                    max-width: 320px;
-                    padding: 20px 20px 50px !important;
-                    margin-top: 30px;
-                }
-            }
-        }
-
-    }
-
-    .organized-info {
+    @include media("<md") {
         padding: 0 !important;
         margin-top: 350px;
 
@@ -1178,311 +1216,8 @@ Our Carrer Page
         }
     }
 
-    .world-skill {
-        padding-bottom: 50px;
-        margin-top: 200px;
-
-        .random-gallary {
-            height: auto;
-
-            .img-0,
-            .img-1,
-            .img-2,
-            .img-3 {
-                position: relative;
-                left: auto;
-                width: 100%;
-                overflow: hidden;
-                margin-top: 30px;
-                top: auto;
-                right: auto;
-                bottom: auto;
-                width: 100%;
-                height: 100%;
-                min-height: 200px;
-            }
-
-            .img-2 {
-                min-height: 350px;
-            }
-
-            .img-3 {
-                min-height: 175px;
-            }
-        }
-
-        .mt-5 {
-            margin-top: 30px !important;
-
-            .col-12 {
-                &:last-child {
-                    max-width: 100%;
-                    padding: 30px 20px 0;
-                    margin-left: 0;
-                }
-            }
-        }
-    }
-
-    .support-section {
-        padding: 42px 0;
-
-        .align-items-center {
-            margin-top: 30px;
-        }
-
-        .text-center {
-            p {
-                padding: 0;
-            }
-        }
-
-        .row {
-            display: block;
-
-            .col-6 {
-                margin-top: 20px;
-                display: block;
-                max-width: 100%;
-            }
-        }
-    }
-
-    .contact-content {
-        .row {
-            .col-md-5 {
-                padding: 0 30px;
-            }
-
-            .col-md-7 {
-                padding: 0 30px;
-
-                .nf-row {
-                    width: 100%;
-                    margin: 0;
-                }
-            }
-        }
-    }
-
-    .project-section {
-        .row.project-content {
-            margin-top: 20px;
-
-            &::after {
-                display: none;
-            }
-
-            .col-lg-5,
-            .col-lg-6 {
-                max-width: 100%;
-                margin: 0;
-                padding: 0 15px;
-                text-align: center;
-            }
-
-            .col-lg-6 {
-                margin-top: 20px;
-
-                p {
-                    &:first-child {
-                        span.contact-label {
-                            margin: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /* our valuse */
-
-    .our-valuse-info {
-        padding-bottom: 30px;
-
-        .text-center {
-            margin-top: 40px;
-
-            &:nth-child(-n+3) {
-                margin-top: 40px;
-            }
-        }
-    }
-
-    .our-values-health-safety {
-        padding: 40px 0;
-        text-align: center;
-
-        .mb-5 {
-            margin-top: 30px;
-
-        }
-
-        .s-image {
-            margin-top: 30px;
-            padding-left: 15px;
-        }
-
-        .m-image {
-            padding-right: 15px;
-            margin-bottom: 30px;
-        }
-    }
-
-    .split-cta {
-        text-align: center;
-
-        .b-block {
-            padding: 0;
-
-        }
-
-        p {
-            &:last-child {
-                position: inherit;
-                margin-top: 46px !important;
-            }
-        }
-
-        .pr-2 {
-            padding-right: 0 !important;
-        }
-    }
-
-    /* our carrer */
-    .benefit-section {
-        .row {
-            .text-center {
-                margin-top: 25px;
-
-                &:first-child {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-
-    /* End our carrer */
-    /* Beginnng Our experience */
-
-    .bg-light {
-        padding: 30px 0 30px;
-
-        .industry-info {
-            margin-top: 20px;
-
-        }
-    }
-
-    .carousel-block-1 {
-        .b-block {
-            padding: 0;
-        }
-
-        .container {
-            p {
-                margin-bottom: 20px;
-            }
-
-            .pl-md-6 {
-                padding-left: 15px !important;
-            }
-
-            ul {
-                margin-bottom: 0;
-            }
-
-            .equal-carousel {
-                display: inline-block;
-                height: 330px !important;
-            }
-
-        }
-
-        .owl-carousel {
-            .owl-nav {
-                .owl-prev {
-                    margin-left: 20px;
-                }
-
-                .owl-next {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
-    .split-cta {
-        .ml-sm-auto {
-            padding-left: 0 !important;
-
-            p:last-child {
-                left: 0 ! important;
-            }
-        }
-    }
-
-
-    /* End Our experience */
-
-}
-
-
-
-@include media(">xs") {
-    .world-skill {
-        .random-gallary {
-
-            .img-0,
-            .img-1,
-            .img-3 {
-                min-height: 350px;
-            }
-
-            .img-2 {
-                min-height: 650px;
-            }
-        }
-    }
-
-    .benefit-section {
-        .row {
-            .text-center {
-                &:nth-child(2) {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-}
-
-@include media(">xxs") {
-    .commitment-info {
-        .zed1 {
-            p {
-                strong {
-                    font-size: 15px;
-                }
-            }
-        }
-    }
-
-    .project-section {
-        .row.project-content {
-            .col-lg-6 {
-                p {
-                    a.contact-details {
-                        display: block;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@include media("<lg") {
-    .organized-info {
-        padding-bottom: 60px !important;
+    @include media("<lg") {
+        padding-bottom: $unit7 + $halfunit !important;
 
         .mt-5 {
             .col-6 {
@@ -1502,7 +1237,91 @@ Our Carrer Page
         }
     }
 
-    .commitment-info {
+    @include media("<xl") {
+        padding-bottom: $unit7 + $halfunit !important;
+
+    }
+
+}
+
+.page-template-page-why-wcc-php {
+    .equal-section {
+        height: 480px;
+
+        .container {
+            height: 100%;
+
+            .row {
+                height: 100%;
+            }
+        }
+
+    }
+
+    /*.random-gallary {
+        .img-3 {
+            width: 270px;
+        }
+    }*/
+}
+
+.commitment-info {
+    background: $depp-gray;
+
+    h2 {
+        margin-bottom: $unit2 + 4px;
+        color: $regal-blue;
+    }
+
+    .zed1 {
+        max-width: 46%;
+
+        p {
+            &:last-child {
+                max-width: 320px;
+                padding: 20px 20px 50px !important;
+                background: $white;
+                margin-top: $unit6 + 2px;
+            }
+
+            strong {
+                float: left;
+                width: 100%;
+                font-size: 16px;
+                color: $deep-blue;
+                margin-top: $unit1 - 2px;
+            }
+        }
+    }
+
+    @include media("<md") {
+        .zed1 {
+            max-width: 100%;
+            padding-left: 0px !important;
+            padding: 0 20px !important;
+
+            p {
+                &:last-child {
+                    max-width: 320px;
+                    padding: 20px 20px 50px !important;
+                    margin-top: $unit4 - 2px;
+                }
+            }
+        }
+
+    }
+
+    @include media(">xxs") {
+        .zed1 {
+            p {
+                strong {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @include media("<lg") {
         padding: 50px 0;
 
         .zed1 {
@@ -1518,86 +1337,178 @@ Our Carrer Page
         }
     }
 
-    .world-skill {
-        padding: 50px 0;
+
+}
+
+
+.history-info {
+    background: $depp-gray;
+
+    h2 {
+        margin-bottom: $unit3 + 1px;
+        color: $regal-blue;
+    }
+
+    .zed1 p {
+        padding-right: $unit7 + 1px;
+    }
+}
+
+
+
+.world-skill {
+    padding-bottom: $unit25;
+
+    h2 {
+        color: $regal-blue;
+    }
+
+    .mt-5 {
+        margin-top: $unit14 + 3px !important;
+
+        .col-12 {
+            &:last-child {
+                max-width: 40%;
+                padding-left: $unit6 + 2px;
+                margin-left: 6%;
+            }
+        }
+    }
+
+    @include media("<md") {
+        padding-bottom: 50px;
+        margin-top: $unit25;
+
+        .random-gallary {
+            height: auto;
+
+            .img-0,
+            .img-1,
+            .img-2,
+            .img-3 {
+                position: relative;
+                left: auto;
+                width: 100%;
+                overflow: hidden;
+                margin-top: $unit4 - 2px;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                width: 100%;
+                height: 100%;
+                min-height: 200px;
+            }
+
+            .img-2 {
+                min-height: 350px;
+            }
+
+            .img-3 {
+                min-height: 175px;
+            }
+        }
 
         .mt-5 {
-            .col-12:last-child {
-                padding-left: 19px;
+            margin-top: $unit4 - 2px !important;
+
+            .col-12 {
+                &:last-child {
+                    max-width: 100%;
+                    padding: 30px 20px 0;
+                    margin-left: 0;
+                }
             }
         }
     }
 
-    .support-section {
-        padding: 50px 0;
+    @include media("<lg") {
 
-        .text-center {
-            p {
-                padding: 0 30px;
-            }
-        }
-    }
+        .world-skill {
+            padding: 50px 0;
 
-    .contact-content {
-        .row {
-            .col-md-7 {
-                .nf-row {
-                    width: 100%;
-                    margin: 0;
-
-                    &:first-child {
-                        margin-right: 17px;
-                    }
+            .mt-5 {
+                .col-12:last-child {
+                    padding-left: $unit2 + 3px;
                 }
             }
         }
 
+
+        .page-template-page-why-wcc-php {
+            .random-gallary {
+                .img-3 {
+                    width: 150px;
+                }
+            }
+        }
     }
 
-    .page-template-page-why-wcc-php {
+    @include media("<xs") {
         .random-gallary {
+
+            /*
+
+            .img-0,
+            .img-1,
             .img-3 {
-                width: 150px;
+                min-height: 350px;
+            }
+*/
+            .img-2 {
+                min-height: 650px;
             }
         }
     }
-
-
-    /* Our experience */
-
-    .carousel-block-1 {
-        .owl-carousel {
-            .owl-nav {
-                .owl-prev {
-                    margin-left: 30px;
-                }
-
-                .owl-next {
-                    margin-right: 30px;
-                }
-            }
-        }
-
-    }
-     .split-cta {
-        .ml-sm-auto {
-            padding-left: 30px;
-
-            p:last-child {
-                left: 35px;
-            }
-        }
-    }
-
-    /* Our experience */
 }
 
-@include media("<xl") {
-    .organized-info {
-        padding-bottom: 60px !important;
+
+
+
+@include media("<md") {
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+
+    header {
+        .navbar {
+            .navbar-brand {
+                -webkit-box-ordinal-group: 2;
+                -webkit-order: 2;
+                -moz-order: 2;
+                -ms-order: 2;
+                order: 2;
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    .grid-wrap {
+        .card {
+            width: 100vw;
+            height: 273px;
+            display: none;
+
+            &:nth-child(-n + 3) {
+                display: block;
+            }
+
+            &.grid-item-2 {
+                height: 245px;
+            }
+
+            &.grid-item-3 {
+                height: 238px;
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+        }
 
     }
 
 }
+
 
 /* End Why Wcc Page */

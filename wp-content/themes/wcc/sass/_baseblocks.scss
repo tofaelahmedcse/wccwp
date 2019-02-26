@@ -27,9 +27,9 @@
   line-height: $line-height;
   @include font-smoothing(on);
   text-rendering: optimizelegibility;
-  padding: $block-mobile-padding 0;
+  padding: $block-mobile-padding;
   @include media('>sm'){
-    padding: $block-padding 0;
+    padding: $block-padding;
   }
   color: $font-color;
   position: relative;

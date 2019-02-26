@@ -1,37 +1,33 @@
+#primary {
+    .hero-section {
+        .hero-row {
+            width: 100%;
 
+            h1 {
+                margin-top: $unit11 + 2px;
+                margin-bottom:$unit2 + $halfunit !important;
+            }
+            p{
+                color: $white;
+            }
 
+            a.btn {
+                margin-top: $unit9 + 2px !important;
+                border: 0;
+                outline: none;
+                @include border-radius(8px);
+                position: relative;
+                @include transition(all .3s ease-in);
 
-#primary{
-    .bg-dark{
-        .row {
-            &.justify-content-center {
-                width: 100%;
-                h1{
-                    margin-top: 90px;
-                    margin-bottom: 20px !important;
-                }
-                a.btn{
-                    margin-top: 74px !important;
-                    background-color: $regal-blue;
-                    border: 0;
-                    outline: none;
-                    @include border-radius(8px);
-                    position: relative;
-                    padding-left: 32px;
-                    padding-right: 32px;
-                    @include transition(all .3s ease-in);
-                    &:hover{
-                        background:$deep-blue; 
-                    }
-                    span{
-                        width: 20px;
-                        height:  25px;
-                        display: inline-block;
-                        margin-right: 17px;
-                        img{
-                            vertical-align: text-bottom;
-                            max-width: 100%;
-                        }
+                span {
+                    width: 20px;
+                    height: 25px;
+                    display: inline-block;
+                    margin-right: $unit2 + 1px;
+
+                    img {
+                        vertical-align: text-bottom;
+                        max-width: 100%;
                     }
                 }
             }
@@ -39,7 +35,7 @@
     }
 }
 
-.go-next-section{
+.go-next-section {
     position: absolute;
     left: 50%;
     @include transform(translateX(-50%));
@@ -47,37 +43,29 @@
     cursor: pointer;
     width: 25px;
     @include transition(all .3s ease-in);
-    img{
+
+    img {
         max-width: 100%;
     }
-    &:hover{
+
+    &:hover {
         bottom: 25px;
     }
-}
-
-.home{
-    #primary{
-        .bg-dark{
-            min-height: 760px;
-        }
+    @include media("<md"){
+        display: none;
     }
 }
 
-
-@include media("<md") {
-    // Baner style 
-    .home{
-        #primary{
-            .bg-dark{
+.home {
+    #primary {
+        .hero-section {
+            min-height: 760px;
+            @include media("<md"){
                 min-height: 347px;
-                a.btn{
+                a.btn {
                     display: none;
                 }
             }
         }
     }
-    .go-next-section{
-        display: none;
-    }
-
 }

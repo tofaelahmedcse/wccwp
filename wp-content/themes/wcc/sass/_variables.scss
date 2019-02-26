@@ -9,10 +9,11 @@
 
 
 $base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
-$second-font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$third-font-family: 'Fira Sans Condensed', Helvetica, Arial, sans-serif;
-$fourth-font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
-$fifth-font-family: 'Krub', Helvetica, Arial, sans-serif;
+$second-font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+$third-font-family: 'Krub', Helvetica, Arial, sans-serif;
+$fourth-font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fifth-font-family: 'Fira Sans Condensed', Helvetica, Arial, sans-serif;
+
 $regular-font: 400;
 
 $font-family-sans-serif: $base-font-family;
@@ -20,8 +21,8 @@ $font-family-sans-serif: $base-font-family;
 $fa-font-path:        "./fonts/fontawesome/webfonts";
 
 // Colors
-$color-primary: #9f9f9f; //primary   Old Base ORange: #F28A2B   #9f9f9f
-$color-secondary: #606060; // old base secondary color: #39699C  #606060
+$color-primary: #033975; //primary   Old Base ORange: #F28A2B   #9f9f9f
+$color-secondary: #0061ac; // old base secondary color: #39699C  #606060
 $color-tertiary: #c6c6c6;
 
 $color-basefont-1: #323232;
@@ -43,7 +44,6 @@ $depp-gray:#f4f5f9;
 $form-grey: #afafaf;
 $regal-blue: #033975;
 $endeavour: #0062ad;
-$endeavour2: #0061AC;
 $deep-blue:#0361a9;
 $comet: #5b5b69;
 $athens-gray: #F4F5F8;
@@ -124,8 +124,8 @@ $unit25: $unit*25;
 $heading-margin: 0.7em;
 
 // Block
-$block-padding: 100px;
-$block-mobile-padding: 50px;
+$block-padding: 100px 0;
+$block-mobile-padding: 50px 0;
 
 //padding for bottom block
 $gutter: 15px;
@@ -135,6 +135,7 @@ $gutter-2: $gutter*2;
 $btn-padding: $unit2 $unit6;
 $btn-padding-lg: $u-25 $unit8;
 $btn-padding-sm: $unit1 $unit3;
+$btn-padding-sml:$unit2;
 
 $btn-border-radius: 2px;
 

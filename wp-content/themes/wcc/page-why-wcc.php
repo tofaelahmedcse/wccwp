@@ -30,13 +30,13 @@ get_header(); ?>
 
             <section class="b-block contracting-info">
                 <div class="container">
-                    <div class="row">
+                    <div class="row contracting-info-row">
                         <div class="col-12 text-center">
                             <h2><?php echo $section_2_headline ?></h2>
                         </div>
                     </div>
-                    <div class="row justify-content-center mt-5">
-                        <div class="col-12 col-md-10 text-center">
+                    <div class="row justify-content-center mt-5 contracting-info-row-second">
+                        <div class="col-12 col-md-10 text-center contracting-col">
                             <?php echo $section_2_text ?>
                         </div>
                     </div>
@@ -76,15 +76,15 @@ get_header(); ?>
                     <section class="b-block organized-info">
                 <div class="container">
                     <div class="row title-info">
-                        <div class="col-12 text-center">
+                        <div class="col-12 organized-col text-center">
                             <h2><?php echo $section_4_headline ?></h2>
                         </div>
                     </div>
-                    <div class="row justify-content-left mt-5">
-                        <div class="col-6 text-left">
+                    <div class="row justify-content-left mt-5 organized-row">
+                        <div class="col-6 text-left organized-col">
                             <?php echo $section_4_text ?>
                         </div>
-                        <div class="col-6 text-left list-info">
+                        <div class="col-6 text-left list-info organized-col">
                            <?php echo $section_4_right_text ?>
                         </div>
                     </div>
@@ -150,17 +150,17 @@ get_header(); ?>
             <section class="b-block support-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 text-center">
+                        <div class="col-12 text-center support-title">
                             <h2><?php echo $section_6_headline ?></h2>
                                <?php echo $section_6_content ?>
                         </div>
                        
                     </div>
-                    <div class="row mt-5 align-items-center offset-md-1">
+                    <div class="row mt-5 align-items-center offset-md-1 support-row">
                         <?php while (have_rows('section_6_images')):the_row();
                             $img = get_sub_field('image');
                             ?>
-                            <div class="col-md-2 col-sm-4 col-6">
+                            <div class="col-md-2 col-sm-4 col-6 row-col">
                                 <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
                             </div>
                         <?php endwhile; ?>

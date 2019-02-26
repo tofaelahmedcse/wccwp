@@ -127,7 +127,7 @@
 
 
 // Font face mixin
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff svg) {
 	$src: null;
 
 	$extmods: (
@@ -137,7 +137,7 @@
 
 	$formats: (
 		otf: "opentype",
-		ttf: "truetype"
+		/*ttf: "truetype"*/
 	);
 
 	@each $ext in $exts {

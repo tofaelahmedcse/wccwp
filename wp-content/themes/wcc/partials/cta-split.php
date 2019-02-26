@@ -22,7 +22,7 @@ $split_2_button_link=get_field('cta_button_link_right');
                 <h3><?php echo $split_1_title ?></h3>
                 <p class="<?php if(isPlaceHolder($split_1_text)){echo 'placeholder-text';} ?>"><?php echo $split_1_text ?></p>
                 <p class="mt-5">
-                    <a class="" href="<?php echo $split_1_button_link['url'] ?>"><?php echo $split_1_button_link['title'] ?><span class="arrow-circle-right"><img src="<?php echo get_template_directory_uri(); ?>/images/link-arrow-blue@2x.png" alt=""></span></a>
+                    <a class="" href="<?php echo $split_1_button_link['url'] ?>"><?php echo $split_1_button_link['title'] ?><span class="arrow-circle-right"><i class="fa fa-arrow-right"></i></span></a>
                 </p>
             </div>
 
@@ -30,7 +30,7 @@ $split_2_button_link=get_field('cta_button_link_right');
                 <h3><?php echo $split_2_title ?></h3>
                 <p class="<?php if(isPlaceHolder($split_2_text)){echo 'placeholder-text';} ?>"><?php echo $split_2_text ?></p>
                 <p class="mt-5">
-                    <a class="" href="<?php echo $split_2_button_link['url'] ?>"><?php echo $split_2_button_link['title'] ?><span class="arrow-circle-right"><img src="<?php echo get_template_directory_uri(); ?>/images/link-arrow-blue@2x.png" alt=""></span></a>
+                    <a class="" href="<?php echo $split_2_button_link['url'] ?>"><?php echo $split_2_button_link['title'] ?><span class="arrow-circle-right"><i class="fa fa-arrow-right"></i></span></a>
                 </p>
             </div>
         </div>

@@ -36,7 +36,7 @@ get_header(); ?>
                 </div>
             </section>
 
-            <section class="b-block bg-light">
+            <section class="b-block bg-light industry-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
@@ -49,7 +49,7 @@ get_header(); ?>
                             $text = get_sub_field('text');
                             ?>
 
-                            <div class="col-6 col-sm-4 col-md-2 text-center">
+                            <div class="col-6 col-sm-4 col-md-2 text-center industry-col">
                                 <div class="rounded-img mb-2">
                                     <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="w-100">
                                 </div>
@@ -144,7 +144,7 @@ get_header(); ?>
                                             <?php endwhile; ?>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 equal-carousel order-1 order-md-12 pl-1 pl-md-6">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 equal-carousel order-1 order-md-12 pl-1 pl-md-6 commercial">
                                         <h3><?php echo $headline ?></h3>
                                         <p><?php echo $text ?></p>
                                     </div>
@@ -167,11 +167,11 @@ get_header(); ?>
                             <h6><?php echo $section_4_sub_headline ?></h6>
                         </div>
                     </div>
-                    <div class="row mt-5 align-items-center offset-md-1">
+                    <div class="row mt-5 align-items-center offset-md-1 support-row">
                         <?php while (have_rows('section_4_images')):the_row();
                             $img = get_sub_field('image');
                             ?>
-                            <div class="col-md-2 col-sm-4 col-6">
+                            <div class="col-md-2 col-sm-4 col-6 row-col">
                                 <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>" >
                             </div>
                         <?php endwhile; ?>

@@ -26,8 +26,8 @@ get_header(); ?>
 
             <section class="b-block pb-0 contact-content">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-5 col-xs-12 col-sm-12">
+                    <div class="row contact-row">
+                        <div class="col-md-5 col-xs-12 col-sm-12 contact-row-col-1">
                             <?php
                             while (have_rows('offices')):the_row();
                                 $office_title = get_sub_field('office_title');
@@ -41,16 +41,16 @@ get_header(); ?>
                                         <h3><?php echo $office_title ?></h3>
                                     </div>
                                 </div>
-                                <div class="row mb-5">
-                                    <div class="col-12 col-md-11">
-                                        <div class="row">
+                                <div class="row mb-5 row-contact">
+                                    <div class="col-12 col-md-11 contact-col">
+                                        <div class="row contact-col-row">
                                             <div class="col-12">
                                                 <?php if ($address) { ?>
                                                     <span><?php echo $address; ?></span>
                                                 <?php } ?>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row contact-col-row">
                                             <div class="col-12">
                                                 <?php if ($phone) { ?>
                                                     <span class="contact-details d-inline-block">Phone:&nbsp; </span><a
@@ -59,7 +59,7 @@ get_header(); ?>
                                                 <?php } ?>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row contact-col-row">
                                             <div class="col-12">
                                                 <?php if ($email) { ?>
                                                     <span class="contact-details d-inline-block">Email: &nbsp; </span><a
@@ -68,7 +68,7 @@ get_header(); ?>
                                                 <?php } ?>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row contact-col-row">
                                             <div class="col-12">
                                                 <?php if ($fax) { ?>
                                                     <span class="contact-details d-inline-block">Fax: &nbsp;</span><span
@@ -84,7 +84,7 @@ get_header(); ?>
                             ?>
 
                         </div>
-                        <div class="col-md-7 pt-3 pb-1 bg-4 col-sm-12 col-xs-12">
+                        <div class="col-md-7 pt-3 pb-1 bg-4 col-sm-12 col-xs-12 contact-row-col-2">
                             <?php if (!empty($form_title)) { ?>
                                 <h3 class="mb-4"><?php echo $form_title; ?></h3>
                             <?php } ?>
@@ -143,13 +143,13 @@ get_header(); ?>
                     </div>
 
                     <div class="row project-content">
-                        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+                        <div class="col-12 col-md-6 col-lg-5 offset-lg-1 project-col">
                             <p><?php echo $section_4_text ?></p>
 
                            
 
                         </div>
-                        <div class="col-12 col-md-6 col-lg-6">
+                        <div class="col-12 col-md-6 col-lg-6 project-col-1">
                              <div>
                                 <?php if ($phone_est) { ?>
                                     <p><span class="contact-label">Call us</span><a

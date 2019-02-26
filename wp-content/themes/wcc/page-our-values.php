@@ -29,13 +29,13 @@ get_header(); ?>
 
             <section class="b-block pb-0 contracting-info">
                 <div class="container">
-                    <div class="row">
+                    <div class="row contracting-info-row">
                         <div class="col-12 text-center">
                             <h2><?php echo $section_2_headline ?></h2>
                         </div>
                     </div>
-                    <div class="row justify-content-center mt-5">
-                        <div class="col-12 col-md-10 text-center">
+                    <div class="row justify-content-center mt-5 contracting-info-row-second">
+                        <div class="col-12 col-md-10 text-center contracting-col">
                             <?php echo $section_2_text ?>
                         </div>
                     </div>
@@ -144,15 +144,15 @@ get_header(); ?>
 
             <section class="b-block our-valuse-info">
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center our-value-row">
 
                             <?php
                             while (have_rows('section_4_content')):the_row();
                                 $headline = get_sub_field('headline');
                                 $text = get_sub_field('text');
                                 $image = get_sub_field('image') ?>
-                                <div class="col-12 col-sm-6 col-md-4 text-center">
-                                    <div class="mb-2">
+                                <div class="col-12 col-sm-6 col-md-4 text-center our-value-info-col">
+                                    <div class="mb-2 value-info-col-inner">
                                         <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
                                     </div>
                                     <h3><?php echo $headline ?></h3>
@@ -174,7 +174,7 @@ get_header(); ?>
                     if ($count % 2 == 0):
                         ?>
 
-                        <div class="container mb-5">
+                        <div class="container mb-5 health-safety-container">
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-6">
                                     <h3><?php echo $headline ?></h3>
@@ -189,7 +189,7 @@ get_header(); ?>
 
                     <?php else: ?>
 
-                        <div class="container mb-5">
+                        <div class="container mb-5 health-safety-container">
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-6 m-image">
                                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alr'] ?>"
