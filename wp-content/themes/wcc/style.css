@@ -20898,7 +20898,7 @@ Typography and Icons
 ================================================================*/
 @font-face {
   font-family: "Krub";
-  src: url("../fonts/krub/Krub-Regular.eot?") format("eot"), url("../fonts/krub/Krub-Regular.woff2") format("woff2"), url("../fonts/krub/Krub-Regular.woff") format("woff"), url("../fonts/krub/Krub-Regular.svg#Krub") format("svg");
+  src: url("../fonts/krub/Krub-Regular.eot?") format("eot"), url("../fonts/krub/Krub-Regular.svg#Krub") format("svg");
 }
 h1 {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
@@ -23099,6 +23099,9 @@ how we work section
   width: 340px;
   height: 56px;
   border-radius: 10px;
+  background-color: #0061ac;
+  padding: 16px;
+  border: 0;
 }
 .how-we-work-section .btn-wrap a.btn:hover, .how-we-work-section .btn-wrap a.btn-primary:hover, .how-we-work-section .btn-wrap a.btn-primary--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--sm:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary--sml:hover, .how-we-work-section .btn-wrap a.btn-primary--secondary--sm:hover, .how-we-work-section .btn-wrap a.btn-primary--tertiary:hover, .how-we-work-section .btn-wrap a.btn-primary--tertiary--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--tertiary--sm:hover, .how-we-work-section .btn-wrap a.btn-primary--inverted:hover, .how-we-work-section .btn-wrap a.btn-primary--inverted--lg:hover, .how-we-work-section .btn-wrap a.btn-primary--inverted--sm:hover, .how-we-work-section .btn-wrap a.btn-secondary:hover, .how-we-work-section .btn-wrap a.btn-secondary--sm:hover, .how-we-work-section .btn-wrap a.btn-secondary--lg:hover {
   color: #FFFFFF;

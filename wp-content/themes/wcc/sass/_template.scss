@@ -136,7 +136,10 @@ how we work section
             width: 340px;
             height: 56px;
             @include border-radius(10px);
-
+            background-color: $denim;
+            padding:$unit2; 
+            border: 0;
+            
             &:hover {
                 color: $white;
             }
