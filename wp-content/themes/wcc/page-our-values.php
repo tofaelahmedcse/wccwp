@@ -155,7 +155,7 @@ get_header(); ?>
                                     <div class="mb-2 value-info-col-inner">
                                         <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
                                     </div>
-                                    <h3><?php echo $headline ?></h3>
+                                    <h6><?php echo $headline ?></h6>
                                     <?php echo $text ?>
                                 </div>
                             <?php endwhile; ?>

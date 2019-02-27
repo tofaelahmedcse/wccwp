@@ -53,7 +53,7 @@ get_header(); ?>
                                 <div class="rounded-img mb-2">
                                     <img src="<?php echo $icon['url'] ?>" alt="<?php echo $icon['alt'] ?>" class="w-100">
                                 </div>
-                                <h4><?php echo $text ?></h4>
+                                <h6><?php echo $text ?></h6>
                             </div>
 
                         <?php endwhile; ?>

@@ -8,11 +8,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700');
 
 
-$base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
-$second-font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
-$third-font-family: 'Krub', Helvetica, Arial, sans-serif;
-$fourth-font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$fifth-font-family: 'Fira Sans Condensed', Helvetica, Arial, sans-serif;
+$base-font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+$second-font-family: 'Krub', Helvetica, Arial, sans-serif;
 
 $regular-font: 400;
 
@@ -161,9 +158,9 @@ $font-size: 16px;
 $line-height: 1.5;
 $headings: (
  h1: (
-   mobile: 2.074rem,
+   mobile: 2rem,
    tablet: 3rem,
-   desktop: 3rem
+   desktop: 3.5rem,
  ),
  h2: (
    mobile: 1.728rem,
@@ -196,7 +193,7 @@ $headings: (
 // Mobile Headings From _variables
 @each $heading, $size-map in $headings {
  #{$heading}, .text-#{$heading} {
-   font-family: $second-font-family;
+   font-family: $base-font-family;
    font-weight: 400;
    color: $font-color;
    margin-bottom: $unit2;

@@ -113,21 +113,6 @@ Molecules
   }
 }
 
-.split-cta{
-  .b-block{
-    position: relative;
-    .bg{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      .bg-row{
-        height: 100%;
-      }
-    }
-  }
-}
-
 .border-text{
   padding-left: 0 ! important;
   @include media('>=md'){
